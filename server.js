@@ -1,6 +1,6 @@
 stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
-mainDiv = $("#")
+mainDivEl = $("#mainDiv")
 
 $(document).ready(() => {
     var cityList = [];
