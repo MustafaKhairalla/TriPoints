@@ -26,7 +26,7 @@ $(document).ready(() => {
                 regGas = response[0].gasoline;
                 midGas = response[0].midGrade;
                 premoGas = response[0].premium;
-                
+
                 for (i = 0; response.result.cities.length; i++) {
                     cityList.push(response.result.cities[i]);
                 };
@@ -40,7 +40,7 @@ $(document).ready(() => {
 
         });
     });
-    $(citySelectEl).on("change", ()=> {
+    $(citySelectEl).on("change", () => {
 
     })
 
