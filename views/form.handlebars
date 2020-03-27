@@ -1,0 +1,31 @@
+     <div class="uk-section" id="formSection">
+                        <div class="uk-container">
+                                <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                                    <div></div>
+                                    <div>
+                                        <form>
+                                            <select class="uk-select">Vehicle Model
+                                               {{#each }}  {{!-- this will loop through the table in db and populate an option for each --}}
+                                                <option value="S-Class">S-Class</option>
+                                                <option value="C-Class">C-Class</option>
+                                            </select>
+
+                                            <select class="uk-select" name="States"> State
+                                                <option value="Colorado">Colorado</option>
+                                                <option value="California">California</option>
+                                            </select>
+
+                                            <select class="uk-select" name="City"> City
+                                                <option value="Denver">Denver</option>
+                                                <option value="colorado Springs">Colorado springs</option>
+                                            </select>
+
+                                            <input class="uk-textarea" placeholder="Average Daily Miles"></input>
+
+                                            <button class="uk-button uk-button-secondary" id="submitButton">submit</button>
+                                        </form>
+                                    </div>
+                                    <div></div>
+                                </div>    
+                        </div>   
+                </div>
