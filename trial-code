@@ -1,0 +1,22 @@
+create table LINEUP (
+    id int AUTO_INCREMENT not null primary key;
+    model varchar(30) not null;
+    starting_price decimal not null;
+    fuel_tank decimal not null;
+    zero_60 decimal not null;
+    MPG int not null;
+    cost_10k int decimal not null;
+    cost_20k int decimal not null;
+    cost_30k int decimal not null;
+    cost_40k int decimal not null;
+    cost_50k int decimal not null;
+    cost_60k int decimal not null;
+
+);
+
+create table DEALERSHIPS (
+    id int AUTO_INCREMENT not null primary key;
+    name varchar(55) not null;
+    phone_number varchar(11) not null;
+    location varchar(99) not null;
+);
