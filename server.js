@@ -1,48 +1,29 @@
-stateSelectEl = $("#stateSelect");
-citySelectEl = $("#citySelect");
-mainDiv = $("#")
+var express = require("express");
 
-$(document).ready(() => {
-    var cityList = [];
-    var regGas = 0;
-    var midGas = 0;
-    var premoGas = 0;
-    stateSelectEl.on("change", () => {
-        var q = $(this).val();
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
-        stateSelectEl.on("change", () => {
-            var settings = {
-                "method": "GET",
-                "hostname": "api.collectapi.com",
-                "port": null,
-                "path": `/gasPrice/stateUsaPrice?state=${q}`,
-                "headers": {
-                    "content-type": "appliaction/json",
-                    "authorization": "apikey 49PSi9LIungoODV0eCgFY1:6kRdisGS8DTmy0S8uTesMe"
-                }
-            }
-            $.ajax(settings).done((response) => {
-                console.log(response);
-                regGas = response[0].gasoline;
-                midGas = response[0].midGrade;
-                premoGas = response[0].premium;
-                
-                for (i = 0; response.result.cities.length; i++) {
-                    cityList.push(response.result.cities[i]);
-                };
-            }).then((cityList) => {
-                var options = '';
-                for (i = 0; i < cityList.length; i++) {
-                    options += '<option value="' + cityList[i].name + '">' + cityList[i].name + '</option>';
-                };
-                citySelectEl.append(options);
-            });
+// Setting up port and requiring models for syncing
+var PORT = process.env.PORT || 8080;
+var db = require("./models");
 
-        });
+// Creating express app and configuring middleware needed for authentication
+var app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static("public"));
+
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// Requiring our routes
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync({ force: false }).then(function () {
+    app.listen(PORT, function () {
+        console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     });
-    $(citySelectEl).on("change", ()=> {
-
-    })
-
 });
-
