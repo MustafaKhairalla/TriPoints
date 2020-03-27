@@ -5,9 +5,10 @@
             <div>
                 <form>
                     <select class="uk-select">Vehicle Model
-                        {{#each }} {{!-- this will loop through the table in db and populate an option for each --}}
-                        <option value="S-Class">S-Class</option>
-                        <option value="C-Class">C-Class</option>
+                        {{#each cars}}
+                        {{!-- this will loop through the table in db and populate an option for each --}}
+                        <option value="{{ id}}">{{ model}}</option>
+
                         {{/each}}
                     </select>
 
