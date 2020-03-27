@@ -11,4 +11,14 @@ module.exports = function (app) {
         // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
         res.render("index");
     });
+
+    // app.get("/", function (req, res) {
+    //     db.all(function (data) {
+    //       var hbsObject = {
+    //         cats: data
+    //       };
+    //       console.log(hbsObject);
+    //       res.render("index", hbsObject);
+    //     });
+    //   });
 }
