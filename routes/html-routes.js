@@ -24,4 +24,23 @@ module.exports = function (app) {
             res.json(data);
         });
     });
+
+    app.get("/api/posts/:id", function (req, res) {
+        db.Lineups.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(function (dbPost) {
+                res.json(dbPost);
+            });
+    });
+    // app.get("/api/posts", async function (req, res) {
+
+    //     const modelChosen = await db.Lineups.findOne({ where: { id: req.params.id } }).then(function (dbLineups) {
+
+    //         res.json(dbLineups);
+    //     });
+    //     console.log(modelChosen);
+    // })
 }
