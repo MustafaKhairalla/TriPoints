@@ -49,6 +49,7 @@ $(document).ready(() => {
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
                 $("#price").text(`$ ${startPrice}`);
                 $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
+                $("#stockphoto").attr("src", data.stockphoto);
 
             }
         });
