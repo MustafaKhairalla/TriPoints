@@ -1,6 +1,7 @@
 stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
-mainDivEl = $("#mainDiv")
+gasPriceEl = $("#gasPrice");
+dailyGasEl = $("#dailyMiles");
 
 
 
@@ -56,42 +57,56 @@ $(document).ready(() => {
     var regGas = 0;
     var midGas = 0;
     var premoGas = 0;
-    stateSelectEl.on("change", () => {
+    $("#stateSelect").on("change", function () {
+  
         var q = $(this).val();
-
-        stateSelectEl.on("change", () => {
-            var settings = {
-                "method": "GET",
-                "hostname": "api.collectapi.com",
-                "port": null,
-                "path": `/gasPrice/stateUsaPrice?state=${q}`,
-                "headers": {
-                    "content-type": "appliaction/json",
-                    "authorization": "apikey 49PSi9LIungoODV0eCgFY1:6kRdisGS8DTmy0S8uTesMe"
-                }
+        $.get("/api/get_price/"+q, function (data) {
+            if(data){
+                console.log("inside api call");
+                console.log(data);
             }
-            $.ajax(settings).done((response) => {
-                console.log(response);
-                regGas = response[0].gasoline;
-                midGas = response[0].midGrade;
-                premoGas = response[0].premium;
+            
+            console.log(data); 
+            console.log(`${q} selected`);
+            // $.ajax(data).done(function (response) {
+            //     console.log(response);
 
-                for (i = 0; response.result.cities.length; i++) {
-                    cityList.push(response.result.cities[i]);
-                };
-            }).then((cityList) => {
-                var options = '';
-                for (i = 0; i < cityList.length; i++) {
-                    options += '<option value="' + cityList[i].name + '">' + cityList[i].name + '</option>';
-                };
-                citySelectEl.append(options);
-            });
 
+            //     for (i = 0; response.result.cities.length; i++) {
+            //         cityList.push(response.result.cities[i]);
+            //     };
+            //     console.log("city list:" + cityList);
+            // }).then(function(cityList) {
+            //     console.log(cityList);
+            //     var options = '';
+            //     for (i = 0; i < cityList.length; i++) {
+            //         options += '<option value="' + cityList[i].name + '">' + cityList[i].name + '</option>';
+            //     };
+            //     citySelectEl.append(options);
+            // });
         });
-    });
-    $(citySelectEl).on("change", () => {
 
-    })
+
+    });
+    $(citySelectEl).on("change", function () {
+
+        var currentCity = $(this).text();
+        var id = $(this).val();
+        console.log(`${currentCity} selected`);
+        cityList.forEach(name => {
+            if (name === currentCity) {
+                regGas = cityList.gasoline;
+                midGas = cityList.midGrade;
+                premoGas = cityList.premium;
+            }
+        });
+        $.get(`api/post/${id}`, (data) => {
+            dailyGas = dailyGasEl.text();
+            var gasPrice = premoGas * data.MPG * dailyGas;
+            gasPriceEl = "<p> Daily gas cost:" + gasPrice + "</p>" + "<p> Year gas cost: " + gasPrice * 365 + "</p>";
+        })
+
+    });
 
 });
 
