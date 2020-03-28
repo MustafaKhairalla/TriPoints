@@ -1,3 +1,4 @@
+
 insert into Lineups (model, starting_price, fuel_tank, zero_60, MPG, cost_10k, cost_20k, cost_30k, cost_40k, cost_50k, cost_60k, total_cost) values ("A220" , 34800 , 13.5, 7.1 , 28, 275 , 775, 275, 775, 855, 1225, 38980 );
 insert into Lineups (model, starting_price, fuel_tank, zero_60, MPG, cost_10k, cost_20k, cost_30k, cost_40k, cost_50k, cost_60k, total_cost) values ("CLA250" , 38650 , 13.5 , 6.3 , 27, 275 , 775, 275, 775, 855, 1225, 42830 );
 insert into Lineups (model, starting_price, fuel_tank, zero_60, MPG, cost_10k, cost_20k, cost_30k, cost_40k, cost_50k, cost_60k, total_cost) values ("C300" , 43400 , 17.5 , 5.7 , 26, 275 , 775, 275, 775, 823, 1225, 47548 );
