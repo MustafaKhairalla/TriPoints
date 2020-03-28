@@ -84,6 +84,13 @@ module.exports = function (sequelize, DataTypes) {
             validate: {
                 len: [1 - 10]
             }
+        },
+        stockphoto: {
+            type: DataTypes.STRING,
+            allownull: false,
+            validate: {
+                len: [1-700]
+            }
         }
     }, { timestamps: false });
     return Lineups;
