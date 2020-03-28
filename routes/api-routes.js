@@ -11,6 +11,14 @@ module.exports = function (app) {
     //     // sign in method 
     // }); 
 
+    app.post("/api/login", passport.authenticate("local"), function (req, res) {
+        // Sending back a password, even a hashed password, isn't a good idea
+        res.json({
+            email: req.user.email,
+            id: req.user.id
+        });
+    });
+
     app.get("/api/signup", function (req, res) {
         // sign up method 
     });
