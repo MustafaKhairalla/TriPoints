@@ -2,11 +2,19 @@ stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
 gasPriceEl = $("#gasPrice");
 dailyGasEl = $("#dailyMiles");
+mainDivEl = $("#mainDiv")
+FindOutButtonEl = $("#findOutButton")
 
 
 
 $(document).ready(() => {
 
+
+    FindOutButtonEl.on("click", function () {
+        window.scrollTo(0, 500);
+        console.log("find button listener")
+        alert("You clicked to find more")
+    })
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
 
@@ -35,12 +43,18 @@ $(document).ready(() => {
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 alert("boooooooo")
+                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalCostOfVehicle = startPrice + totalMaintenance;
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
                 $("#price").text(`$ ${startPrice}`);
+                $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
+
+                $("#stockphoto").attr("src", data.stockphoto);
+
+
 
             }
         });

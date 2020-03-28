@@ -10,7 +10,7 @@
         <div></div> <!-- empty column -->
         <div>
             <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo1" width=>
-            <button class="uk-button uk-button-secondary">Find Out</button>
+            <button class="uk-button uk-button-secondary" id="findOutButton">Find Out</button>
         </div>
         <div></div> <!-- empty column -->
     </div>
@@ -42,7 +42,7 @@
             <div>
                 <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
-                        {{!-- <option id="modelInput"></option> --}}
+                        <option value="" disabled selected>Please select Model</option>
                         {{!-- {{#each cars}} --}}
                         {{!-- this will loop through the table in db and populate an option for each --}}
                         {{!-- <option value="{{id}}">{{model}}</option> --}}
@@ -51,17 +51,18 @@
 
                     </select>
 
-                    <select class="uk-select" name="States"> State
-                        <option value="Colorado">Colorado</option>
-                        <option value="California">California</option>
+                    <select class="uk-select" name="States"id="stateSelect"> State
+                        <option value="CO">CO</option>
+                        <option value="CA">CA</option>
                     </select>
 
-                    <select class="uk-select" name="City"> City
-                        <option value="Denver">Denver</option>
-                        <option value="colorado Springs">Colorado springs</option>
+                    <select class="uk-select" name="City" id="citySelect" > City
+                        <option value=“” disabled selected>Select City</option>
+                        {{!-- <option value="defualt">Select City</option> --}}
+                        {{!-- <option value="colorado Springs">Colorado springs</option> --}}
                     </select>
 
-                    <input class="uk-textarea" placeholder="Average Daily Miles"></input>
+                    <input class="uk-textarea" placeholder="Average Daily Miles" id="dailyMiles"></input>
 
                     <button class="uk-button uk-button-secondary" id="submitButton">submit</button>
                 </form>
@@ -76,13 +77,13 @@
     <div class="uk-container">
         <div class="uk-card uk-card-default uk-card-body">
             <div uk-grid>
-                <h1>The Total Cost of your Vehicle</h1>
+                <h1 id="vehicleName">The Total Cost of your Vehicle</h1>
                 <h2 class="totalDollarValue">$000,000</h2>
             </div>
             <div class="uk-child-width-expand@s" uk-grid>
                 <div class="uk-grid-item-match">
                     <div class="uk-card uk-card-default uk-card-body">
-                        <img src="assets/images/WhiteMercedesExample.jpg" alt="ExampleVehicle">
+                        <img src="assets/images/WhiteMercedesExample.jpg" alt="ExampleVehicle" id="stockphoto">
                     </div>
                 </div>
                 <div>
