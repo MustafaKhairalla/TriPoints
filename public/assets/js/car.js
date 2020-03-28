@@ -24,6 +24,8 @@ $(document).ready(() => {
             }
         }
     });
+
+    // GETTING ID TO PULL DATA FROM DB AND DISPLAYING PRICES TO USER
     $("#model-area").on("change", function () {
         alert("model has been chosen!!!")
         var id = $(this).val();
@@ -37,7 +39,7 @@ $(document).ready(() => {
                 var totalCostOfVehicle = startPrice + totalMaintenance;
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
-                // $("#price").text(`$ ${startPrice}`);
+                $("#price").text(`$ ${startPrice}`);
 
             }
         });
