@@ -42,7 +42,7 @@
             <div>
                 <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
-                        {{!-- <option id="modelInput"></option> --}}
+                        <option value="" disabled selected>Please select Model</option>
                         {{!-- {{#each cars}} --}}
                         {{!-- this will loop through the table in db and populate an option for each --}}
                         {{!-- <option value="{{id}}">{{model}}</option> --}}
@@ -76,7 +76,7 @@
     <div class="uk-container">
         <div class="uk-card uk-card-default uk-card-body">
             <div uk-grid>
-                <h1>The Total Cost of your Vehicle</h1>
+                <h1 id="vehicleName">The Total Cost of your Vehicle</h1>
                 <h2 class="totalDollarValue">$000,000</h2>
             </div>
             <div class="uk-child-width-expand@s" uk-grid>
