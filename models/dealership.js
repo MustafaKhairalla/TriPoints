@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Dealership = sequelize.define("Dealer", {
+    var Dealers = sequelize.define("Dealers", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -21,6 +21,6 @@ module.exports = function (sequelize, DataTypes) {
                 len: [2 - 20]
             }
         },
-    });
-    return Dealership;
+    }, { timestamps: false });
+    return Dealers;
 }

@@ -2,7 +2,61 @@ stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
 mainDivEl = $("#mainDiv")
 
+// $(document).ready(() => {
+
+// $.get("/api/all", function (data) {
+
+//     if (data.length !== 0) {
+
+//         // for (var i = 0; i < data.length; i++) {
+//         //     // alert("hello");
+//         //     // console.log("data from jquery:");
+//         //     // console.log(data);
+//         //     var row = $("<div>");
+//         //     row.addClass("chirp");
+//         //     // row.append("<p> chirped.. </p>");
+//         //     row.append("<p>" + data[i].model + " chirped.. </p>");
+
+//         //     $("#chirp-area").prepend(row);
+
+//         // }
+//         for (var i = 0; i < data.length; i++) {
+
+//             var option = $("<option>");
+//             option.val(data[i].id);
+//             option.text(data[i].model);
+
+//             $("#model-area").prepend(option);
+
+//         }
+//     }
+//     $("#model-area").val("");
+// });
+// })
+
+
 $(document).ready(() => {
+
+
+    // GETTING ALL CAR MODELS DISPLAYED FOR USER :
+
+    $.get("/api/all", function (data) {
+
+        if (data.length !== 0) {
+
+            for (var i = 0; i < data.length; i++) {
+
+                var option = $("<option>");
+                option.val(data[i].id);
+                option.text(data[i].model);
+
+                $("#model-area").prepend(option);
+
+            }
+        }
+        $("#model-area").val("");
+    });
+
     var cityList = [];
     var regGas = 0;
     var midGas = 0;

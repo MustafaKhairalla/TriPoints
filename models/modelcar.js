@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-    var Benz = sequelize.define("LINEUP", {
+    var Lineups = sequelize.define("Lineups", {
+
         model: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -84,6 +85,7 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1 - 10]
             }
         }
-    });
-    return Benz;
+    }, { timestamps: false });
+    return Lineups;
 };
+

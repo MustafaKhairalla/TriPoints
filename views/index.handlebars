@@ -1,49 +1,85 @@
 <div class="uk-section" id="header">
-                <div class="uk-container">
-                        <button type="button" class="uk-button uk-button-default uk-button-small login" >Log-in</button>
-                </div>
-            </div>
-           
-        <div class="uk-section">
-                <div class="uk-container"></div>
-                <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
-                    <div></div> <!-- empty column -->
-                    <div>
-                     <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo1" width=>
-                     <button class="uk-button uk-button-secondary">Find Out</button>
-                    </div>
-                    <div></div> <!-- empty column -->
-                </div>
-            </div>
-            <div class="uk-section">
-                    <div class="uk-container">
-                    <div class="uk-grid-match uk-child-width-1-4@m" uk-grid>
-                        <div>
-                            <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hood up">
-                        </div>
-                        <div>
-                         <img src="assets/images/Headlights_1x1.png" alt="headlights" id="headlights">
-                        </div>
-                        <div>
-                            <img src="assets/images/Keys_1x1.png" alt="Keys" id="Keys">
-                        </div> 
-                        <div>
-                            <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="Door handle">
-                        </div> 
-                    </div>
-                </div>
-                </div>
+    <div class="uk-container">
+        <button type="button" class="uk-button uk-button-default uk-button-small login">Log-in</button>
+    </div>
+</div>
 
-                {{Form.Handlebars}}
-                {{Modals.Handlebars}}
-        
-    <footer class="footer" id="footer">
-            <div class="uk-section">
-                    <div class="uk-container">
-                        <div uk-grid>
-                            <p>Dictum non consectetur a erat nam.</p> 
-                            <p>Et odio pellentesque diam volutpat commodo.</p>
-                        </div>
-                    </div>
+<div class="uk-section">
+    <div class="uk-container"></div>
+    <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+        <div></div> <!-- empty column -->
+        <div>
+            <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo1" width=>
+            <button class="uk-button uk-button-secondary">Find Out</button>
+        </div>
+        <div></div> <!-- empty column -->
+    </div>
+</div>
+<div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-match uk-child-width-1-4@m" uk-grid>
+            <div>
+                <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hood up">
             </div>
-    </footer>
+            <div>
+                <img src="assets/images/Headlights_1x1.png" alt="headlights" id="headlights">
+            </div>
+            <div>
+                <img src="assets/images/Keys_1x1.png" alt="Keys" id="Keys">
+            </div>
+            <div>
+                <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="Door handle">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="uk-section" id="formSection">
+    <div class="uk-container">
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+
+            </div>
+            <div>
+                <form>
+                    <select id="model-area" class="uk-select">Vehicle Model
+
+                        {{!-- {{#each cars}} --}}
+                        {{!-- this will loop through the table in db and populate an option for each --}}
+                        {{!-- <option value="{{id}}">{{model}}</option> --}}
+
+                        {{!-- {{/each}} --}}
+
+                    </select>
+
+                    <select class="uk-select" name="States"> State
+                        <option value="Colorado">Colorado</option>
+                        <option value="California">California</option>
+                    </select>
+
+                    <select class="uk-select" name="City"> City
+                        <option value="Denver">Denver</option>
+                        <option value="colorado Springs">Colorado springs</option>
+                    </select>
+
+                    <input class="uk-textarea" placeholder="Average Daily Miles"></input>
+
+                    <button class="uk-button uk-button-secondary" id="submitButton">submit</button>
+                </form>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</div>
+{{Form.Handlebars}}
+{{Modals.Handlebars}}
+
+<footer class="footer" id="footer">
+    <div class="uk-section">
+        <div class="uk-container">
+            <div uk-grid>
+                <p>Dictum non consectetur a erat nam.</p>
+                <p>Et odio pellentesque diam volutpat commodo.</p>
+            </div>
+        </div>
+    </div>
+</footer>
