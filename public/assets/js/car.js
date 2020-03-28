@@ -1,11 +1,18 @@
 stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
 mainDivEl = $("#mainDiv")
+FindOutButtonEl = $("#findOutButton")
 
 
 
 $(document).ready(() => {
 
+
+    FindOutButtonEl.on("click", function () {
+        window.scrollTo(0, 500);
+        console.log("find button listener")
+        alert("You clicked to find more")
+    })
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
 

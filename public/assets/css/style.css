@@ -1,5 +1,5 @@
 body{
-    background-image: url(assets/images/BackgroundPattern.jpg);
+    background-image: url("/public/assets/images/BackgroundPattern.jpg");
     background-size: cover;
     background-repeat: repeat-x;
     height: 100vh;
