@@ -50,6 +50,10 @@ $(document).ready(() => {
                 $("#price").text(`$ ${startPrice}`);
                 $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
 
+                $("#stockphoto").attr("src", data.stockphoto);
+
+
+
             }
         });
 
