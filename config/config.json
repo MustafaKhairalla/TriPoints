@@ -22,5 +22,48 @@
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
+  },
+  "cristian": {
+    "username": "node",
+    "password": "12345",
+    "database": "mb_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "elena": {
+    "username": "root",
+    "password": "0404abcdef",
+    "database": "mb_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "amelia": {
+    "username": "root",
+    "password": "LoveCalvin22!!!",
+    "database": "mb_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }, 
+  "jacob": {
+    "username": "root",
+    "password": "Bobo_1995",
+    "database": "mb_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  
+  },
+  "mustafa": {
+    "username": "nodetest",
+    "password": "12345",
+    "database": "mb_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  
   }
+  
 }
