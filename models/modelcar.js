@@ -89,7 +89,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allownull: false,
             validate: {
-                len: [1-700]
+                len: [1 - 700]
             }
         }
     }, { timestamps: false });
