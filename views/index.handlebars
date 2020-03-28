@@ -10,7 +10,7 @@
         <div></div> <!-- empty column -->
         <div>
             <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo1" width=>
-            <button class="uk-button uk-button-secondary">Find Out</button>
+            <button class="uk-button uk-button-secondary" id="findOutButton">Find Out</button>
         </div>
         <div></div> <!-- empty column -->
     </div>
@@ -40,9 +40,9 @@
 
             </div>
             <div>
-                <form>
+                <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
-
+                        <option value="" disabled selected>Please select Model</option>
                         {{!-- {{#each cars}} --}}
                         {{!-- this will loop through the table in db and populate an option for each --}}
                         {{!-- <option value="{{id}}">{{model}}</option> --}}
@@ -72,7 +72,47 @@
 </div>
 {{Form.Handlebars}}
 {{Modals.Handlebars}}
+<div class="uk-section" id="vehicleInfo">
+    <div class="uk-container">
+        <div class="uk-card uk-card-default uk-card-body">
+            <div uk-grid>
+                <h1 id="vehicleName">The Total Cost of your Vehicle</h1>
+                <h2 class="totalDollarValue">$000,000</h2>
+            </div>
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div class="uk-grid-item-match">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <img src="assets/images/WhiteMercedesExample.jpg" alt="ExampleVehicle" id="stockphoto">
+                    </div>
+                </div>
+                <div>
+                    <div uk-grid>
+                        <img src="assets/images/Car Icon.png" id="icon" alt="car Icon">
+                        <p id="price">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <div uk-grid>
+                        <img src="assets/images/Gas Icon.png" alt="Gas" id="icon">
+                        <p id="gasPrice">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <div uk-grid>
+                        <img src="assets/images/Wrench Icon.png" alt="Wrench" id="icon">
+                        <p id="MaintenancePrice">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
 
+                </div>
+
+            </div>
+        </div>
+
+        <!-- this is where the modal of the car will go -->
+    </div>
+</div>
 <footer class="footer" id="footer">
     <div class="uk-section">
         <div class="uk-container">

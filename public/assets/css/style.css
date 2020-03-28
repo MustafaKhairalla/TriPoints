@@ -1,5 +1,5 @@
 body{
-    background-image: url(assets/images/BackgroundPattern.jpg);
+    background-image: url("https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/BackgroundPattern.jpg");
     background-size: cover;
     background-repeat: repeat-x;
     height: 100vh;
@@ -41,7 +41,7 @@ footer{
     background-color: black;
 }
 #vehicleInfo{
-    background-image: url(assets/images/BackgroundPattern.jpg);
+    background-image: url("https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/BackgroundPattern.jpg");
     background-size: cover;
     background-repeat: repeat-x;
     height: 75vh;

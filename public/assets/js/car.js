@@ -1,42 +1,18 @@
 stateSelectEl = $("#stateSelect");
 citySelectEl = $("#citySelect");
 mainDivEl = $("#mainDiv")
+FindOutButtonEl = $("#findOutButton")
 
-// $(document).ready(() => {
-
-// $.get("/api/all", function (data) {
-
-//     if (data.length !== 0) {
-
-//         // for (var i = 0; i < data.length; i++) {
-//         //     // alert("hello");
-//         //     // console.log("data from jquery:");
-//         //     // console.log(data);
-//         //     var row = $("<div>");
-//         //     row.addClass("chirp");
-//         //     // row.append("<p> chirped.. </p>");
-//         //     row.append("<p>" + data[i].model + " chirped.. </p>");
-
-//         //     $("#chirp-area").prepend(row);
-
-//         // }
-//         for (var i = 0; i < data.length; i++) {
-
-//             var option = $("<option>");
-//             option.val(data[i].id);
-//             option.text(data[i].model);
-
-//             $("#model-area").prepend(option);
-
-//         }
-//     }
-//     $("#model-area").val("");
-// });
-// })
 
 
 $(document).ready(() => {
 
+
+    FindOutButtonEl.on("click", function () {
+        window.scrollTo(0, 500);
+        console.log("find button listener")
+        alert("You clicked to find more")
+    })
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
 
@@ -54,8 +30,36 @@ $(document).ready(() => {
 
             }
         }
-        $("#model-area").val("");
     });
+
+    // GETTING ID TO PULL DATA FROM DB AND DISPLAYING PRICES TO USER
+    $("#model-area").on("change", function () {
+        alert("model has been chosen!!!")
+        var id = $(this).val();
+        console.log("id chosen:");
+        console.log(id);
+        $.get("/api/posts/" + id, function (data) {
+            if (data) {
+                alert("boooooooo")
+                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+                var startPrice = parseInt(data.starting_price);
+                var totalMaintenance = parseInt(data.total_cost);
+                var totalCostOfVehicle = startPrice + totalMaintenance;
+                console.log(`start price ${totalCostOfVehicle}`);
+                $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
+                $("#price").text(`$ ${startPrice}`);
+                $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
+
+            }
+        });
+
+    });
+
+    // $("#model-area").val("");
+
+
+
+
 
     var cityList = [];
     var regGas = 0;

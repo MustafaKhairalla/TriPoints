@@ -1,7 +1,12 @@
 {
   "development": {
+<<<<<<< HEAD
     "username": "nodetest",
     "password": "12345",
+=======
+    "username": "root",
+    "password": "LoveCalvin22!!!",
+>>>>>>> d5801989c672402ce4e00679cbd5f9a55fb03726
     "database": "mb_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
