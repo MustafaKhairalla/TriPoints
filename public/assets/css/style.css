@@ -37,8 +37,10 @@ h1,h2,h3,h4,h5,h6,p{
     float: right;
     margin: 6%, 0%, 4%, 0%;
 }
-footer{
+footer {
     background-color: black;
+    padding: 10px;
+    margin-top: 5px;
 }
 #vehicleInfo{
     background-image: url("https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/BackgroundPattern.jpg");
