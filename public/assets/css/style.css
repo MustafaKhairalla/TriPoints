@@ -53,3 +53,25 @@ footer{
 #icon{
     width: 15%;
 }
+li {
+    list-style-type: none
+}
+#disc {
+    color: grey;
+    font-size: x-small;
+}
+#mb {
+    color: grey;
+}
+.footer1 {
+    color: grey;
+}
+#links {
+    color:grey;
+}
+#follow {
+    color: grey
+}
+.absolutely {
+    position: relative;
+}
