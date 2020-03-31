@@ -55,8 +55,11 @@ $(document).ready(() => {
         });
 
     });
-
-    // $("#model-area").val("");
+    // GET DEALERS INFO
+    $.get("/api/dealers", function (data2) {
+        alert("dealers!!");
+        $("#footer")
+    })
 
 
 
