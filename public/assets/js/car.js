@@ -49,15 +49,18 @@ $(document).ready(() => {
                     alert("boooooooo")
                     $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                     var startPrice = parseInt(data.starting_price);
+                    var startPrice1 = parseInt(data.starting_price).toLocaleString();
                     var totalMaintenance = parseInt(data.total_cost);
-                    var totalCostOfVehicle = startPrice + totalMaintenance;
+                    var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
+                    var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
                     console.log(`start price ${totalCostOfVehicle}`);
                     $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
-                    $("#price").text(`$ ${startPrice}`);
-                    $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
+                    $("#price").text(`$ ${startPrice1}`);
+                    $("#MaintenancePrice").text(`$ ${totalMaintenance1}`);
 
                     $("#stockphoto").attr("src", data.stockphoto);
-
+                    // //var number = 1557564534;
+                    // document.body.innerHTML = number.toLocaleString();
 
 
                 }
