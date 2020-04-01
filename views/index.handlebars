@@ -1,6 +1,7 @@
 <div class="uk-section" id="header">
     <div class="uk-container">
-        <button type="button" class="uk-button uk-button-default uk-button-small login">Log-in</button>
+        {{!-- <button type="button" class="uk-button uk-button-default uk-button-small login" href="">Log-in</button> --}}
+        <a href= '/Login' class="login" >Log-in</a>
     </div>
 </div>
 
@@ -19,16 +20,16 @@
     <div class="uk-container">
         <div class="uk-grid-match uk-child-width-1-4@m" uk-grid>
             <div>
-                <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hood up">
+                <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hoodUp">
             </div>
             <div>
-                <img src="assets/images/Headlights_1x1.png" alt="headlights" id="headlights">
+                <img src="assets/images/MercHeadlight_1x1.png" alt="headlights" id="headlights">
             </div>
             <div>
                 <img src="assets/images/Keys_1x1.png" alt="Keys" id="Keys">
             </div>
             <div>
-                <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="Door handle">
+                <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="DoorHandle">
             </div>
         </div>
     </div>
@@ -43,11 +44,11 @@
                 <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
                         <option value="" disabled selected>Please select Model</option>
-                        {{!-- {{#each cars}} --}}
+                        {{#each cars}}
                         {{!-- this will loop through the table in db and populate an option for each --}}
-                        {{!-- <option value="{{id}}">{{model}}</option> --}}
+                        <option value="{{id}}">{{model}}</option>
 
-                        {{!-- {{/each}} --}}
+                        {{/each}}
 
                     </select>
 
