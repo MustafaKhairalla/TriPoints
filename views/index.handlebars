@@ -1,6 +1,7 @@
 <div class="uk-section" id="header">
     <div class="uk-container">
-        <button type="button" class="uk-button uk-button-default uk-button-small login">Log-in</button>
+        {{!-- <button type="button" class="uk-button uk-button-default uk-button-small login" href="">Log-in</button> --}}
+        <a href='/Login' class="login">Log-in</a>
     </div>
 </div>
 
@@ -19,16 +20,16 @@
     <div class="uk-container">
         <div class="uk-grid-match uk-child-width-1-4@m" uk-grid>
             <div>
-                <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hood up">
+                <img src="assets/images/HoodUp_1x1.png" alt="hood up" id="hoodUp">
             </div>
             <div>
-                <img src="assets/images/Headlights_1x1.png" alt="headlights" id="headlights">
+                <img src="assets/images/MercHeadlight_1x1.png" alt="headlights" id="headlights">
             </div>
             <div>
                 <img src="assets/images/Keys_1x1.png" alt="Keys" id="Keys">
             </div>
             <div>
-                <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="Door handle">
+                <img src="assets/images/DoorHandle_1x1.png" alt="doorHandle" id="DoorHandle">
             </div>
         </div>
     </div>
@@ -43,11 +44,7 @@
                 <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
                         <option value="" disabled selected>Please select Model</option>
-                        {{!-- {{#each cars}} --}}
-                        {{!-- this will loop through the table in db and populate an option for each --}}
-                        {{!-- <option value="{{id}}">{{model}}</option> --}}
 
-                        {{!-- {{/each}} --}}
 
                     </select>
 
@@ -90,19 +87,19 @@
                     <div uk-grid>
                         <img src="assets/images/Car Icon.png" id="icon" alt="car Icon">
                         <p id="price">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Select a vehicle above to view starting price.
                         </p>
                     </div>
                     <div uk-grid>
                         <img src="assets/images/Gas Icon.png" alt="Gas" id="icon">
                         <p id="gasPrice">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Select a vehicle above to view average fuel costs.
                         </p>
                     </div>
                     <div uk-grid>
                         <img src="assets/images/Wrench Icon.png" alt="Wrench" id="icon">
                         <p id="MaintenancePrice">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Select a vehicle above to view average servuce costs.
                         </p>
                     </div>
 
@@ -113,6 +110,114 @@
 
         <!-- this is where the modal of the car will go -->
     </div>
+</div>
+<div class="uk-section" id="UserHeader">
+    <div class="uk-container">
+        <div class="uk-card">
+            <div class="uk-card-header">
+                <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+                    <div>
+                        <h1>Choose a Model</h1>
+                    </div>
+                    <div>
+                        <form>
+                            <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                {{!-- {{#each cars}}
+                                <option value="{{ id}}">{{ model}}</option>
+                                {{/each}} --}}
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+                    <div class="uk-card-media-left uk-cover-container">
+                        <img src="assets/images/eclass1.jpg" alt="Test image" uk-cover>
+                        <canvas width="" height=""></canvas>
+                    </div>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div><i class="fas fa-car"></i> </div>
+                            <div>
+                                <p>MSRP</p>
+                            </div>
+                            <div>
+                                <p class=msrp>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i class="fas fa-wrench"></i> </div>
+                            <div>
+                                <p>Total Cost of Service </p>
+                            </div>
+                            <div>
+                                <p class=costService>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>10K</p>
+                            </div>
+                            <div>
+                                <p class=10kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>20K</p>
+                            </div>
+                            <div>
+                                <p class=20kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>30K</p>
+                            </div>
+                            <div>
+                                <p class=30kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>40K</p>
+                            </div>
+                            <div>
+                                <p class=40kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>50K</p>
+                            </div>
+                            <div>
+                                <p class=50kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>60K</p>
+                            </div>
+                            <div>
+                                <p class=60kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </div>
 <!--<footer class="footer" id="footer">
     <div class="uk-section">
