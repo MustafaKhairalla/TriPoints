@@ -59,11 +59,43 @@ $(document).ready(() => {
 
     });
     // GET DEALERS INFO
-    $.get("/api/dealers", function (data2) {
-        alert("dealers!!");
-        $("#footer")
-    })
+    // $.get("/api/dealers", function (data2) {
+    //     alert("dealers!!");
+    //     getDealersInfo(data2);
+    //     function getDealersInfo(data2) {
+    //         var newDealer = {
+    //             name: data2.name,
+    //             phone_number: data2.hone_number,
+    //             address: data2.address
 
+    //         };
+
+    //         $.ajax("/api/dealers", {
+    //             type: "POST",
+    //             data: newDealer
+    //         }).then(function () {
+    //             console.log("NDealers ready!");
+    //             location.reload();
+    //         });
+    //     }
+    // })
+
+
+    // $.get("/api/dealers", function (data2) {
+
+    //     if (data2.length !== 0) {
+
+    //         for (var i = 0; i < data2.length; i++) {
+
+
+    //             $("#dealerName").text(data2[i].name);
+    //             // option.text(data[i].model);
+
+    //             // $("#model-area").prepend(option);
+
+    //         }
+    //     }
+    // });
 
 
 
