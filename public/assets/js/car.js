@@ -44,14 +44,14 @@ $(document).ready(() => {
     });
 
     // GETTING ID TO PULL DATA FROM DB AND DISPLAYING PRICES TO USER
-    $("#model-area").on("change", function () {
+    $("#model-area1").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
         console.log(id);
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 // alert("boooooooo")
-                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+                $("#vehicleName").text(`The Total Cost of Your` + `${data.model}` + `:`);
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
@@ -59,8 +59,8 @@ $(document).ready(() => {
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
-                $("#price").text(`$ ${startPrice1}`);
-                $("#MaintenancePrice").text(`$ ${totalMaintenance1}`);
+                $("#price").text(`Starting Price: `+`$ ${startPrice1}`);
+                $("#MaintenancePrice").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#stockphoto").attr("src", data.stockphoto);
                 mpg = data.MPG;
             }
@@ -89,7 +89,7 @@ $(document).ready(() => {
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 // alert("boooooooo")
-                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+                $("#vehicleName").text(`The Total Cost of Your ${data.model}` + `:`);
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
@@ -98,8 +98,8 @@ $(document).ready(() => {
                 var mpg1 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp1").text(`$ ${totalCostOfVehicle}`);
-                $("#service1").text(`$ ${startPrice1}`);
-                $("#service1").text(`$ ${totalMaintenance1}`);
+                $("#service1").text(`Starting Price: `+`$ ${startPrice1}`);
+                $("#service1").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#comparephoto1").attr("src", data.stockphoto);
                 var serviceIntervalsHead = "Service Intervals"
                 $(".serviceIntervalsHead").text(serviceIntervalsHead);
@@ -154,7 +154,7 @@ $(document).ready(() => {
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp2").text(`$ ${totalCostOfVehicle}`);
                 $("#service2").text(`$ ${startPrice1}`);
-                $("#service2").text(`$ ${totalMaintenance1}`);
+                $("#service2").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#comparephoto2").attr("src", data.stockphoto);
                 var serviceIntervalsHead2 = "Service Intervals"
                 $(".serviceIntervalsHead2").text(serviceIntervalsHead2);
