@@ -131,12 +131,14 @@ $(document).ready(() => {
     });
    
     submitEl.on("click", function(event){
+        
         event.preventDefault();
         console.log("submitted");
-        console.log 
+        console.log (mpg)
+        console.log(dailyGas)
         dailyGas =  parseFloat(dailyGasEl.val());
-        displayGas = ((mpg/dailyGas) * premoGas);
-        gasPriceEl.text(displayGas);
+        displayGas = ((dailyGas/mpg) * premoGas);
+        gasPriceEl.text("Daily gas cost: " + displayGas.toFixed(2));
     }); 
 
 });
