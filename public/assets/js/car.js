@@ -13,11 +13,17 @@ $(document).ready(() => {
     var dailyGas = 0;
     var displayGas = 0;
     var mpg = 0;
+
+    submitEl.on("click", function () {
+        window.scrollTo(0, 1250);
+        console.log("submit button listener")
+        // alert("You clicked to find more")
+    });
     FindOutButtonEl.on("click", function () {
         window.scrollTo(0, 500);
         console.log("find button listener")
         // alert("You clicked to find more")
-    })
+    });
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
 

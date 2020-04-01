@@ -118,3 +118,6 @@ li {
    height:229px;
    object-fit: cover;
 }
+html {
+    scroll-behavior: smooth;
+  }
