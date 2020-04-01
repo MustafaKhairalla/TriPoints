@@ -12,6 +12,13 @@ module.exports = function (app) {
         res.render("index", { cars: res });
     });
 
+    app.get("/login", function (req, res) {
+        // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+        // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+        res.render("Login", { cars: res });
+    });
+
+
     app.get("/api/all", function (req, res) {
 
         db.Lineups.findAll({}).then(function (data) {
