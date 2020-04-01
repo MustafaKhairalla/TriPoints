@@ -1,3 +1,8 @@
+<div class="uk-section" id="header">
+    <div class="uk-container">
+        <a href='/' class="login">Home</a>
+    </div>
+</div>
 <div class="uk-section" id= "UserHeader">
             <div class="uk-container">
                     <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
@@ -22,9 +27,9 @@
                                     </div>
                                     <div class="uk-width-expand">
                                             <form>
-                                                <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                <select id="model-area" class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
                                                         {{#each cars}}
-                                                                <option value="{{id}}">{{ model}}</option>
+                                                                <option value="{{id}}">{{ model }}</option>
                                                         {{/each}}
                                                 </select>  
                                                 {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
@@ -39,20 +44,35 @@
                                     <div uk-grid>
                                         <div class="k-width-auto@m">
                                             <i class="fas fa-car"></i> 
-                                            <p>Replace with MSRP</p>
+                                            <p id="msrp1">Replace with MSRP</p>
                                         </div>
                                             <div class="k-width-auto@m">
                                                 <i class="fas fa-wrench" width="50px"></i>
-                                                <p>Replace with service costs</p>
+                                                <p id="service1">Replace with service costs</p>
                                             </div>
                                             <div class="k-width-auto@m">
                                                 <i class="fas fa-gas-pump"></i>
-                                                <p>0,000</p>
+                                                <p id="fuel1">0,000</p>
                                             </div>
                                         </div>
+
                             </div>
                             <div class="uk-card-footer">
-                                <img src="assets/images/gla2.jpg"></img>
+                                <img id="comparephoto1" src="assets/images/gla2.jpg"></img>
+                                <!--insert-->
+                                <hr>
+                                <h5>Service Intervals</h5>
+                                <ul>
+                                    <li id="tenk1"></li>
+                                    <li id="twenk1"></li>
+                                    <li id="thirk1"></li>
+                                    <li id="fork1"></li>
+                                    <li id="fifk1"></li>
+                                    <li id="sixk1"></li>
+                                </ul>
+
+                                <!--insert-->
+                                
                             </div>
                     </div>
                 </div>
@@ -65,9 +85,9 @@
                                     </div>
                                     <div class="uk-width-expand">
                                             <form>
-                                                 <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                 <select id="model-area2" class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
                                                         {{#each cars}}
-                                                                <option value="{{id}}">{{ model}}</option>
+                                                                <option value="{{id}}">{{ model }}</option>
                                                         {{/each}}
                                                 </select>  
                                                 {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
@@ -82,20 +102,30 @@
                                     <div uk-grid>
                                         <div class="k-width-auto@m">
                                             <i class="fas fa-car"></i> 
-                                            <p>Replace with MSRP</p>
+                                            <p id="msrp2">Replace with MSRP</p>
                                         </div>
                                             <div class="k-width-auto@m">
                                                 <i class="fas fa-wrench" width="50px"></i>
-                                                <p>Replace with service costs</p>
+                                                <p id="service2">Replace with service costs</p>
                                             </div>
                                             <div class="k-width-auto@m">
                                                 <i class="fas fa-gas-pump"></i>
-                                                <p>0,000</p>
+                                                <p id="fuel2">0,000</p>
                                             </div>
                                         </div>
                             </div>
                             <div class="uk-card-footer">
-                                <img src="assets/images/glc3.jpg"></img>
+                                <img id="comparephoto2" src="assets/images/glc3.jpg"></img>
+                                <hr>
+                                <h5>Service Intervals</h5>
+                                <ul>
+                                    <li id="tenk2"></li>
+                                    <li id="twenk2"></li>
+                                    <li id="thirk2"></li>
+                                    <li id="fork2"></li>
+                                    <li id="fifk2"></li>
+                                    <li id="sixk2"></li>
+                                </ul>
                             </div>
                     </div>
                 </div>        
