@@ -47,8 +47,8 @@ module.exports = function (app) {
         var result = await axios.get(`http://api.collectapi.com/gasPrice/stateUsaPrice?state=${q}`, config); 
         console.log(JSON.stringify(result.data, null, 2)); 
 
-        gasPrice = result[0].state.premium; 
+        gasPrice = result.data.result.state.premium; 
         console.log("Gas price: "+gasPrice);
-        return result;
+        res.json(gasPrice);
     })
 }
