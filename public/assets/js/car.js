@@ -60,22 +60,15 @@ $(document).ready(() => {
 
 
 
-<<<<<<< HEAD
                 }
             });
 
         });
-=======
-            }
-        });
-
-    });
-    // GET DEALERS INFO
-    $.get("/api/dealers", function (data2) {
-        alert("dealers!!");
-        $("#footer")
-    })
->>>>>>> 3b3f751e7d31e9b121e2b295d220c8ee3d755d91
+        // GET DEALERS INFO
+        $.get("/api/dealers", function (data2) {
+            alert("dealers!!");
+            $("#footer")
+        })
 
         // $("#model-area").val("");
 

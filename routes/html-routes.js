@@ -11,7 +11,6 @@ module.exports = function (app) {
         res.render("index", { cars: res });
     });
 
-<<<<<<< HEAD
     app.get("/Login", function (req, res) {
         // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
         // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
@@ -19,9 +18,6 @@ module.exports = function (app) {
     });
 
 
-=======
-    //GET CAR INFO
->>>>>>> 3b3f751e7d31e9b121e2b295d220c8ee3d755d91
     app.get("/api/all", function (req, res) {
 
         db.Lineups.findAll({}).then(function (data) {
