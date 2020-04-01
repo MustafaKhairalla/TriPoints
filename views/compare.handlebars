@@ -3,378 +3,159 @@
         <a href='/' class="login">Home</a>
     </div>
 </div>
-<div class="uk-section" id= "UserHeader">
-            <div class="uk-container">
-                    <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
-                            <div></div> <!-- empty column -->
-                            <div>
-                             <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo2" >
-                            </div>
-                            <div></div> <!-- empty column -->
-                    </div>
-            </div>
-    </div>
-
+<div class="uk-section" id="UserHeader">
     <div class="uk-container">
-        <div class="uk-section">
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                    <div class="uk-width-auto">
-                                        <h4>Choose a Model</h4>
-                                    </div>
-                                    <div class="uk-width-expand">
-                                            <form>
-                                                <select id="model-area" class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                        {{#each cars}}
-                                                                <option value="{{id}}">{{ model }}</option>
-                                                        {{/each}}
-                                                </select>  
-                                                {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                        <option value="S-Class">S-Class</option>
-                                                        <option value="C-Class">C-Class</option>
-                                                    </select>   --}}
-                                            </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-body">
-                                    <div uk-grid>
-                                        <div class="k-width-auto@m">
-                                            <i class="fas fa-car"></i> 
-                                            <p id="msrp1">Replace with MSRP</p>
-                                        </div>
-                                            <div class="k-width-auto@m">
-                                                <i class="fas fa-wrench" width="50px"></i>
-                                                <p id="service1">Replace with service costs</p>
-                                            </div>
-                                            <div class="k-width-auto@m">
-                                                <i class="fas fa-gas-pump"></i>
-                                                <p id="fuel1">0,000</p>
-                                            </div>
-                                        </div>
-
-                            </div>
-                            <div class="uk-card-footer">
-                                <img id="comparephoto1" src="assets/images/gla2.jpg"></img>
-                                <!--insert-->
-                                <hr>
-                                <h5>Service Intervals</h5>
-                                <ul>
-                                    <li id="tenk1"></li>
-                                    <li id="twenk1"></li>
-                                    <li id="thirk1"></li>
-                                    <li id="fork1"></li>
-                                    <li id="fifk1"></li>
-                                    <li id="sixk1"></li>
-                                </ul>
-
-                                <!--insert-->
-                                
-                            </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default ">
-                            <div class="uk-card-header">
-                                <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                    <div class="uk-width-auto">
-                                        <h4>Choose a Model</h4>
-                                    </div>
-                                    <div class="uk-width-expand">
-                                            <form>
-                                                 <select id="model-area2" class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                        {{#each cars}}
-                                                                <option value="{{id}}">{{ model }}</option>
-                                                        {{/each}}
-                                                </select>  
-                                                {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                        <option value="S-Class">S-Class</option>
-                                                        <option value="C-Class">C-Class</option>
-                                                    </select>   --}}
-                                            </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-body">
-                                    <div uk-grid>
-                                        <div class="k-width-auto@m">
-                                            <i class="fas fa-car"></i> 
-                                            <p id="msrp2">Replace with MSRP</p>
-                                        </div>
-                                            <div class="k-width-auto@m">
-                                                <i class="fas fa-wrench" width="50px"></i>
-                                                <p id="service2">Replace with service costs</p>
-                                            </div>
-                                            <div class="k-width-auto@m">
-                                                <i class="fas fa-gas-pump"></i>
-                                                <p id="fuel2">0,000</p>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="uk-card-footer">
-                                <img id="comparephoto2" src="assets/images/glc3.jpg"></img>
-                                <hr>
-                                <h5>Service Intervals</h5>
-                                <ul>
-                                    <li id="tenk2"></li>
-                                    <li id="twenk2"></li>
-                                    <li id="thirk2"></li>
-                                    <li id="fork2"></li>
-                                    <li id="fifk2"></li>
-                                    <li id="sixk2"></li>
-                                </ul>
-                            </div>
-                    </div>
-                </div>        
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div></div> <!-- empty column -->
+            <div>
+                <img src="assets/images/TriPoints Logo.png" alt="TriPointsLogo" id="Logo2">
             </div>
+            <div></div> <!-- empty column -->
         </div>
-{{!-- 
-<div class="uk-section" id= "UserHeader">
-                <div class="uk-container">
-                    <div class="uk-card">
-                            <div class="uk-card-header">
-                                    <div class="uk-child-width-1-2 uk-text-center" uk-grid>
-                                       <div><h1>Choose a Model</h1> </div> 
-                                       <div>
-                                            <form>
-                                                    <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                                 {{#each cars}}
-                                                                <option value="{{ id}}">{{ model}}</option>
-                                                                {{/each}}
-                                                        </select>  
-                                                    </form>
-                                       </div>           
-                                    </div>
-                            </div>
-                            <div class="uk-card-body">
-                                    <div class="uk-child-width-1-2 uk-text-center" uk-grid>
-                                            <div class="uk-card-media-left uk-cover-container">
-                                                    <img src="assets/images/eclass1.jpg" alt="Test image" uk-cover>
-                                                    <canvas width="" height=""></canvas>
-                                                </div>
-                                                    <div class="uk-card-body">
-                                                            <div uk-grid>
-                                                                    <div><i class="fas fa-car"></i>  </div>
-                                                                    <div><p>MSRP</p></div>
-                                                                    <div><p class=msrp>40,000</p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i class="fas fa-wrench"></i> </div>
-                                                                    <div><p>Total Cost of Service </p></div>
-                                                                    <div><p class=costService>40,000</p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>10K</p></div>
-                                                                    <div><p class=10kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>20K</p></div>
-                                                                    <div><p class=20kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>30K</p></div>
-                                                                    <div><p class=30kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>40K</p></div>
-                                                                    <div><p class=40kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>50K</p></div>
-                                                                    <div><p class=50kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                            <div uk-grid>
-                                                                    <div><i></i> </div>
-                                                                    <div><p>60K</p></div>
-                                                                    <div><p class=60kservices>Lorem Ipsum </p></div>
-                                                            </div>
-                                                    </div>
-                                                   
-                                                
-                                                </div>
-                                    </div>
+    </div>
+</div>
 
+<div class="uk-container">
+    <div class="uk-section">
+        <div class="uk-child-width-1-2@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <h4>Choose a Model</h4>
+                            </div>
+                            <div class="uk-width-expand">
+                                <form>
+                                    <select id="model-area" class="uk-select" id="compareModelsSelect"
+                                        width="60%">Vehicle Model
+                                        <option value="" disabled selected>Please select Model</option>
+
+                                    </select>
+                                    {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        <option value="S-Class">S-Class</option>
+                                                        <option value="C-Class">C-Class</option>
+                                                    </select>   --}}
+                                </form>
                             </div>
                         </div>
-                </div>
-     </div> --}}
+                    </div>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-car"></i>
+                                <p id="msrp1">Replace with MSRP</p>
+                            </div>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-wrench" width="50px"></i>
+                                <p id="service1">Replace with service costs</p>
+                            </div>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-gas-pump"></i>
+                                <p id="fuel1">0,000</p>
+                            </div>
+                        </div>
 
-      {{!-- <footer class="footer" id="footer">
-        <br>
-        <div class="row">
-            <div class="col-sm-5 footer1">
-                <br>
-                <p>Thanks for visiting Tripoints! To test-drive the vehicle of your dreams, please call your local
-                    Mercedes-Benz dealership.</p>
-                <div class="row">
-                    <div class="col-sm-12">
+                    </div>
+                    <div class="uk-card-footer">
+                        <img id="comparephoto1" src="assets/images/WhiteMercedesExample.jpg"></img>
+                        <!--insert-->
+                        <hr>
+                        <h5>Service Intervals</h5>
                         <ul>
-                            <li>
-                                <div class="uk-inline">
-                                    <p>Littleton</p>
-                                    <div uk-drop="pos: right-center">
-                                        <div class="uk-card uk-card-body uk-card-default">
-                                            <ul>
-                                                <li><span class="uk-margin-small-right" uk-icon="phone"></span>
-                                                    303-738-7700</li>
-                                                <hr>
-                                                <li><span class="uk-margin-small-right" uk-icon="location"></span><a
-                                                        href="https://www.google.com/maps/place/Mercedes-Benz+of+Littleton/@39.5695091,-104.9901577,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x876c7e7f48d6eb4b:0xeed0666a2b991c96!2sMercedes-Benz+of+Denver!8m2!3d39.6996668!4d-104.9401848!3m4!1s0x876c822cf9d69999:0x75a4dbfff1c71dd0!8m2!3d39.569505!4d-104.987969"
-                                                        target="_blank">8070 S Broadway Littleton, CO 80122</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-inline">
-                                    <p>Denver</p>
-                                    <div uk-drop="pos: right-center">
-                                        <div class="uk-card uk-card-body uk-card-default">
-                                            <ul>
-                                                <li><span class="uk-margin-small-right" uk-icon="phone"></span>
-                                                    303-953-4581</li>
-                                                <hr>
-                                                <li><span class="uk-margin-small-right" uk-icon="location"></span><a
-                                                        href="https://www.google.com/maps/place/Mercedes-Benz+of+Denver/@39.6996668,-104.9423735,17z/data=!3m1!4b1!4m5!3m4!1s0x876c7e7f48d6eb4b:0xeed0666a2b991c96!8m2!3d39.6996668!4d-104.9401848"
-                                                        target="_blank">940 S Colorado Blvd, Denver, CO 80246</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-inline">
-                                    <p>Westminster</p>
-                                    <div uk-drop="pos: right-center">
-                                        <div class="uk-card uk-card-body uk-card-default">
-                                            <ul>
-                                                <li><span class="uk-margin-small-right" uk-icon="phone"></span>
-                                                    720-263-4661</li>
-                                                <hr>
-                                                <li><span class="uk-margin-small-right" uk-icon="location"></span><a
-                                                        href="https://www.google.com/maps/place/Mercedes-Benz+of+Westminster/@39.8861749,-105.0712359,17z/data=!3m1!4b1!4m5!3m4!1s0x876b8987b5b4af67:0x6f4e8e52c010435a!8m2!3d39.8861708!4d-105.0690472"
-                                                        target="_blank">10391 Westminster Blvd, Westminster, CO
-                                                        80020</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-inline">
-                                    <p>Colorado Springs</p>
-                                    <div uk-drop="pos: right-center">
-                                        <div class="uk-card uk-card-body uk-card-default">
-                                            <ul>
-                                                <li><span class="uk-margin-small-right" uk-icon="phone"></span>
-                                                    719-639-2268</li>
-                                                <hr>
-                                                <li><span class="uk-margin-small-right" uk-icon="location"></span><a
-                                                        href="https://www.google.com/maps/place/Mercedes-Benz+of+Colorado+Springs/@38.8166714,-104.8429991,17z/data=!3m1!4b1!4m5!3m4!1s0x871344d3e5c3b0bd:0x13951962d936d14d!8m2!3d38.8166672!4d-104.8408104"
-                                                        target="_blank">730 Automotive Dr, CO Springs, CO 80905</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-inline">
-                                    <p>Loveland</p>
-                                    <div uk-drop="pos: right-center">
-                                        <div class="uk-card uk-card-body uk-card-default">
-                                            <ul>
-                                                <li><span class="uk-margin-small-right" uk-icon="phone"></span>
-                                                    970-344-4206</li>
-                                                <hr>
-                                                <li><span class="uk-margin-small-right" uk-icon="location"></span><a
-                                                        href="https://www.google.com/maps/place/Mercedes-Benz+of+Loveland/@40.4339176,-104.9965158,17z/data=!3m1!4b1!4m5!3m4!1s0x876ead0dd5517111:0x3309c475666f6ef7!8m2!3d40.4339135!4d-104.9943271"
-                                                        target="_blank">4040 Byrd Dr, Loveland, CO 80538</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li id="tenk1"></li>
+                            <li id="twenk1"></li>
+                            <li id="thirk1"></li>
+                            <li id="fork1"></li>
+                            <li id="fifk1"></li>
+                            <li id="sixk1"></li>
                         </ul>
-                        <p id="disc">***Actual pricing may vary.</p>
+
+                        <!--insert-->
+
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <br>
-                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
-                            uk-slider="autoplay: true; autoplay-interval:2500;">
+            <div>
+                <div class="uk-card uk-card-default ">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <h4>Choose a Model</h4>
+                            </div>
+                            <div class="uk-width-expand">
+                                <form>
+                                    <select id="model-area2" class="uk-select" id="compareModelsSelect"
+                                        width="60%">Vehicle Model
+                                        <option value="" disabled selected>Please select Model</option>
 
-                            <ul
-                                class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
-                                <li>
-                                    <img src="/assets/images/aclass3.jpg" alt="a class">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/cclass3.jpg" alt="c class">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/eclass1.jpg" alt="e class">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/sclass2.jpg" alt="s class">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/gle2.jpg" alt="gle">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/gls3.jpg" alt="gls">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/glc3.jpg" alt="glc">
-                                </li>
-                                <li>
-                                    <img src="/assets/images/gla3.jpg" alt="gla">
-                                </li>
-                            </ul>
+                                    </select>
+                                    {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        <option value="S-Class">S-Class</option>
+                                                        <option value="C-Class">C-Class</option>
+                                                    </select>   --}}
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12"> <br> </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h2 id="mb">- The Mercedes-Benz Lineup -</h2>
-                        <br>
-                        <br>
-                        <br>
-                        <div id="links">
-                            <h4 id="follow">Connect With Mercedes-Benz:</h4>
-                            <a href="https://www.facebook.com/MercedesBenz/" target="_blank" uk-icon="icon: facebook; ratio:2"></a>
-                            <a href="https://twitter.com/MercedesBenz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"
-                                uk-icon="icon: twitter; ratio:2"></a>
-                            <a href="https://www.instagram.com/mercedesbenz/?hl=en"  target="_blank"uk-icon="icon: instagram; ratio:2"></a>
-                            <a href="https://www.youtube.com/channel/UClj0L8WZrVydk5xKOscI6-A" target="_blank"
-                                uk-icon="icon: youtube; ratio:2"></a>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-car"></i>
+                                <p id="msrp2">Replace with MSRP</p>
+                            </div>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-wrench" width="50px"></i>
+                                <p id="service2">Replace with service costs</p>
+                            </div>
+                            <div class="k-width-auto@m">
+                                <i class="fas fa-gas-pump"></i>
+                                <p id="fuel2">0,000</p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="uk-card-footer">
+                        <img id="comparephoto2" src="assets/images/WhiteMercedesExample.jpg"></img>
+                        <hr>
+                        <h5>Service Intervals</h5>
+                        <ul>
+                            <li id="tenk2"></li>
+                            <li id="twenk2"></li>
+                            <li id="thirk2"></li>
+                            <li id="fork2"></li>
+                            <li id="fifk2"></li>
+                            <li id="sixk2"></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="uk-overflow-auto uk-margin-medium">
+        <div class="uk-card-header">
+            <h1 class="text-center"> Compare your Models </h1>
         </div>
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th align="left">Model</th>
+                    <th align="left">MSRP</th>
+                    <th align="left">Service costs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left"><code>A220</code></td>
+                    <td align="left">$ 30 000</td>
+                    <td align="left">$ 450</td>
+                </tr>
+                <tr>
+                    <td align="left"><code>S450</code></td>
+                    <td align="left">$ 60 000</td>
+                    <td align="left">$ 750</td>
+                </tr>
 
-    </footer>
+            </tbody>
 
-    <!--Footer End-->
-    <script src="/assets/js/control.js"></script>
-    <script src="/assets/js/car.js"></script>
-</body>
-
-</html> --}}
+        </table>
+    </div>

@@ -16,7 +16,7 @@ $(document).ready(() => {
     FindOutButtonEl.on("click", function () {
         window.scrollTo(0, 500);
         console.log("find button listener")
-        alert("You clicked to find more")
+        // alert("You clicked to find more")
     })
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
@@ -31,7 +31,7 @@ $(document).ready(() => {
                 option.val(data[i].id);
                 option.text(data[i].model);
 
-                $("#model-area").prepend(option);
+                $(".model-area").prepend(option);
 
             }
         }
@@ -47,10 +47,10 @@ $(document).ready(() => {
                 // alert("boooooooo")
                 $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
-                var startPrice1 = parseInt(data.starting_price).toLocaleString();
+                var startPrice1 = parseInt(data.starting_price);
                 var totalMaintenance = parseInt(data.total_cost);
-                var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
-                var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
+                var totalMaintenance1 = parseInt(data.total_cost);
+                var totalCostOfVehicle = (startPrice + totalMaintenance);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
                 $("#price").text(`$ ${startPrice1}`);
@@ -164,46 +164,9 @@ $(document).ready(() => {
         });
     });
     /////////////////////////////////end of jake input
-    
-
-    // GET DEALERS INFO
-    // $.get("/api/dealers", function (data2) {
-    //     alert("dealers!!");
-    //     getDealersInfo(data2);
-    //     function getDealersInfo(data2) {
-    //         var newDealer = {
-    //             name: data2.name,
-    //             phone_number: data2.hone_number,
-    //             address: data2.address
-
-    //         };
-
-    //         $.ajax("/api/dealers", {
-    //             type: "POST",
-    //             data: newDealer
-    //         }).then(function () {
-    //             console.log("NDealers ready!");
-    //             location.reload();
-    //         });
-    //     }
-    // })
 
 
-    // $.get("/api/dealers", function (data2) {
 
-    //     if (data2.length !== 0) {
-
-    //         for (var i = 0; i < data2.length; i++) {
-
-
-    //             $("#dealerName").text(data2[i].name);
-    //             // option.text(data[i].model);
-
-    //             // $("#model-area").prepend(option);
-
-    //         }
-    //     }
-    // });
     $("#stateSelect").on("change", function () {
         // console.log("stuff");
         var q = $(this).val();
@@ -227,6 +190,8 @@ $(document).ready(() => {
         dailyGas = parseFloat(dailyGasEl.val());
         displayGas = ((dailyGas / mpg) * premoGas);
         gasPriceEl.text("Daily gas cost: $" + displayGas.toFixed(2));
+
+
     });
 
 });
