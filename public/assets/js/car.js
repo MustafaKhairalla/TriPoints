@@ -89,6 +89,7 @@ $(document).ready(() => {
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
+                var mpg1 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp1").text(`$ ${totalCostOfVehicle}`);
                 $("#service1").text(`$ ${startPrice1}`);
@@ -96,6 +97,7 @@ $(document).ready(() => {
                 $("#comparephoto1").attr("src", data.stockphoto);
                 var serviceIntervalsHead = "Service Intervals"
                 $(".serviceIntervalsHead").text(serviceIntervalsHead);
+                $("#fuel1").text(mpg1 + " MPG (Combined)");
                 ////////////////////////////// jake input begin
                 var tenk1 = parseInt(data.cost_10k);
                 var twenk1 = parseInt(data.cost_20k);
@@ -142,6 +144,7 @@ $(document).ready(() => {
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
+                var mpg2 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp2").text(`$ ${totalCostOfVehicle}`);
                 $("#service2").text(`$ ${startPrice1}`);
@@ -149,6 +152,7 @@ $(document).ready(() => {
                 $("#comparephoto2").attr("src", data.stockphoto);
                 var serviceIntervalsHead2 = "Service Intervals"
                 $(".serviceIntervalsHead2").text(serviceIntervalsHead2);
+                $("#fuel2").text(mpg2 + " MPG (Combined)");
                 //jake////////////////////////////
                 var tenk2 = parseInt(data.cost_10k);
                 var twenk2 = parseInt(data.cost_20k);
