@@ -1,3 +1,18 @@
+/* @media only screen and (max-width: 600px) {
+  #hoodUp{
+      width: 5%;
+  }
+  #headlights{
+   visibility: hidden;
+  }
+  #Keys{
+    visibility: hidden;
+  }
+  #DoorHandle{
+    visibility: hidden; 
+  }
+  } */
+
 body{
     background-image: url("https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/BackgroundPattern.jpg");
     background-size: cover;
@@ -21,6 +36,17 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .login{
     float: right;
+    color:#ffffff;
+    background-color: black;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* padding: 0, 5%, 0, 5%;
+    border-style: solid;
+    border-width: .5px;
+    border-color: black; */
+}
+a:hover{
+    color:#E6E7E8;
 }
 #formSection{
     background-color: #E6E7E8;
