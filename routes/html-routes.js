@@ -15,11 +15,6 @@ module.exports = function (app) {
     app.get("/api/all", function (req, res) {
 
         db.Lineups.findAll({}).then(function (data) {
-            // var carObject = {
-            //     cars: data
-            // }
-            // console.log("data:");
-            // console.log(data);
 
             res.json(data);
         });
@@ -30,6 +25,7 @@ module.exports = function (app) {
         db.Dealers.findAll({}).then(function (data2) {
             console.log("dilers :");
             console.log(data2);
+            // res.render("index", { dealers: data2 });
             res.json(data2);
         })
     });
