@@ -1,5 +1,5 @@
 var db = require("../models");
-
+var axios = require("axios");
 var authentication = require("../config/middleware/authentication.js");
 
 module.exports = function (app) {
@@ -30,4 +30,25 @@ module.exports = function (app) {
             });
         }
     });
+
+    app.get("/api/get_price/:q", async function (req, res) {
+        var q = req.params.q
+        var gasPrice = 0; 
+        console.log("got " +q );
+       
+
+        config = { 
+            "headers": {
+                "content-type": "appliaction/json",
+                "authorization": "apikey 49PSi9LIungoODV0eCgFY1:6kRdisGS8DTmy0S8uTesMe"
+            },
+            
+        }
+        var result = await axios.get(`http://api.collectapi.com/gasPrice/stateUsaPrice?state=${q}`, config); 
+        console.log(JSON.stringify(result.data, null, 2)); 
+
+        gasPrice = result.data.result.state.premium; 
+        console.log("Gas price: "+gasPrice);
+        res.json(gasPrice);
+    })
 }
