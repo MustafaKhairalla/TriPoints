@@ -11,7 +11,7 @@ $(document).ready(() => {
     FindOutButtonEl.on("click", function () {
         window.scrollTo(0, 500);
         console.log("find button listener")
-        alert("You clicked to find more")
+        // alert("You clicked to find more")
     })
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
@@ -26,21 +26,21 @@ $(document).ready(() => {
                 option.val(data[i].id);
                 option.text(data[i].model);
 
-                $("#model-area").prepend(option);
+                $(".model-area").prepend(option);
 
             }
         }
     });
 
     // GETTING ID TO PULL DATA FROM DB AND DISPLAYING PRICES TO USER
-    $("#model-area").on("change", function () {
-        alert("model has been chosen!!!")
+    $(".mode_1").on("change", function () {
+        // alert("model has been chosen!!!")
         var id = $(this).val();
         console.log("id chosen:");
         console.log(id);
         $.get("/api/posts/" + id, function (data) {
             if (data) {
-                alert("boooooooo")
+                // alert("boooooooo")
                 $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
                 var totalMaintenance = parseInt(data.total_cost);

@@ -42,7 +42,7 @@
             </div>
             <div>
                 <form id="submitform">
-                    <select id="model-area" class="uk-select">Vehicle Model
+                    <select class="mode_1 model-area uk-select">Vehicle Model
                         <option value="" disabled selected>Please select Model</option>
 
 
@@ -110,8 +110,10 @@
         <!-- this is where the modal of the car will go -->
     </div>
 </div>
+<!--COMPARE SECTION -->
 <div class="uk-section" id="UserHeader">
     <div class="uk-container">
+
         <div class="uk-card">
             <div class="uk-card-header">
                 <div class="uk-child-width-1-2 uk-text-center" uk-grid>
@@ -120,13 +122,101 @@
                     </div>
                     <div>
                         <form>
-                            <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                            <select class="mode_2 model-area uk-select" id="compareModelsSelect" width="60%">Vehicle
+                                Model
+                                <option value="" disabled selected>Please select Model</option>
+
                                 {{!-- {{#each cars}}
                                 <option value="{{ id}}">{{ model}}</option>
                                 {{/each}} --}}
                             </select>
                         </form>
                     </div>
+                </div>
+            </div>
+
+            <div class="uk-card-body">
+                <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+                    <div class="uk-card-media-left uk-cover-container">
+                        <img src="assets/images/eclass1.jpg" alt="Test image" uk-cover>
+                        <canvas width="400" height="300"></canvas>
+                    </div>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div><i class="fas fa-car"></i> </div>
+                            <div>
+                                <p>MSRP</p>
+                            </div>
+                            <div>
+                                <p class=msrp>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i class="fas fa-wrench"></i> </div>
+                            <div>
+                                <p>Total Cost of Service </p>
+                            </div>
+                            <div>
+                                <p class=costService>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>10K</p>
+                            </div>
+                            <div>
+                                <p class=10kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>20K</p>
+                            </div>
+                            <div>
+                                <p class=20kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>30K</p>
+                            </div>
+                            <div>
+                                <p class=30kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>40K</p>
+                            </div>
+                            <div>
+                                <p class=40kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>50K</p>
+                            </div>
+                            <div>
+                                <p class=50kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>60K</p>
+                            </div>
+                            <div>
+                                <p class=60kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="uk-card-body">
@@ -213,7 +303,6 @@
 
                 </div>
             </div>
-
         </div>
     </div>
 </div>
