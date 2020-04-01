@@ -41,6 +41,14 @@ module.exports = function (app) {
                 res.json(dbPost);
             });
     });
+
+    //  LOAD compare page
+
+    app.get("/compare", function (req, res) {
+        // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+        res.render("compare", { cars: res });
+    });
+
     // app.get("/api/posts", async function (req, res) {
 
     //     const modelChosen = await db.Lineups.findOne({ where: { id: req.params.id } }).then(function (dbLineups) {
