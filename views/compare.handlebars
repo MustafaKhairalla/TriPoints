@@ -10,6 +10,98 @@
             </div>
     </div>
 
+    <div class="uk-container">
+        <div class="uk-section">
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <h4>Choose a Model</h4>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                            <form>
+                                                <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        {{#each cars}}
+                                                                <option value="{{id}}">{{ model}}</option>
+                                                        {{/each}}
+                                                </select>  
+                                                {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        <option value="S-Class">S-Class</option>
+                                                        <option value="C-Class">C-Class</option>
+                                                    </select>   --}}
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                                    <div uk-grid>
+                                        <div class="k-width-auto@m">
+                                            <i class="fas fa-car"></i> 
+                                            <p>Replace with MSRP</p>
+                                        </div>
+                                            <div class="k-width-auto@m">
+                                                <i class="fas fa-wrench" width="50px"></i>
+                                                <p>Replace with service costs</p>
+                                            </div>
+                                            <div class="k-width-auto@m">
+                                                <i class="fas fa-gas-pump"></i>
+                                                <p>0,000</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="uk-card-footer">
+                                <img src="assets/images/gla2.jpg"></img>
+                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default ">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <h4>Choose a Model</h4>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                            <form>
+                                                 <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        {{#each cars}}
+                                                                <option value="{{id}}">{{ model}}</option>
+                                                        {{/each}}
+                                                </select>  
+                                                {{!-- <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                                        <option value="S-Class">S-Class</option>
+                                                        <option value="C-Class">C-Class</option>
+                                                    </select>   --}}
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                                    <div uk-grid>
+                                        <div class="k-width-auto@m">
+                                            <i class="fas fa-car"></i> 
+                                            <p>Replace with MSRP</p>
+                                        </div>
+                                            <div class="k-width-auto@m">
+                                                <i class="fas fa-wrench" width="50px"></i>
+                                                <p>Replace with service costs</p>
+                                            </div>
+                                            <div class="k-width-auto@m">
+                                                <i class="fas fa-gas-pump"></i>
+                                                <p>0,000</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="uk-card-footer">
+                                <img src="assets/images/glc3.jpg"></img>
+                            </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+{{!-- 
 <div class="uk-section" id= "UserHeader">
                 <div class="uk-container">
                     <div class="uk-card">
@@ -83,9 +175,9 @@
                             </div>
                         </div>
                 </div>
-     </div>
+     </div> --}}
 
-      <footer class="footer" id="footer">
+      {{!-- <footer class="footer" id="footer">
         <br>
         <div class="row">
             <div class="col-sm-5 footer1">
@@ -255,4 +347,4 @@
     <script src="/assets/js/car.js"></script>
 </body>
 
-</html>
+</html> --}}
