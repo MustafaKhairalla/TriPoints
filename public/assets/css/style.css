@@ -105,3 +105,6 @@ li {
 .absolutely {
     position: relative;
 }
+.uk-card-header{
+    background-color: #E6E7E8;
+}
