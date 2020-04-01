@@ -41,12 +41,18 @@ $(document).ready(() => {
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 alert("boooooooo")
+                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalCostOfVehicle = startPrice + totalMaintenance;
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
                 $("#price").text(`$ ${startPrice}`);
+                $("#MaintenancePrice").text(`$ ${totalMaintenance}`);
+
+                $("#stockphoto").attr("src", data.stockphoto);
+
+
 
             }
         });
