@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/MustafaKhairalla/project-duck-2.0#readme",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^4.0.1",
+=======
+>>>>>>> 3b3f751e7d31e9b121e2b295d220c8ee3d755d91
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "passport": "^0.4.1",
