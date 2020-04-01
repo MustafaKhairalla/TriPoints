@@ -7,8 +7,9 @@
                                        <div>
                                             <form>
                                                     <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
-                                                            <option value="S-Class">S-Class</option>
-                                                            <option value="C-Class">C-Class</option>
+                                                                 {{#each cars}}
+                                                                <option value="{{ id}}">{{ model}}</option>
+                                                                {{/each}}
                                                         </select>  
                                                     </form>
                                        </div>           
