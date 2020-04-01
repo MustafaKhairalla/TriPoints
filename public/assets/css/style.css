@@ -108,3 +108,13 @@ li {
 .uk-card-header{
     background-color: #E6E7E8;
 }
+.photofix {
+    width:428px;
+   height:160px;
+   object-fit: cover;
+}
+.photofix2 {
+    width:229px;
+   height:229px;
+   object-fit: cover;
+}

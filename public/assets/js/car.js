@@ -47,10 +47,10 @@ $(document).ready(() => {
                 // alert("boooooooo")
                 $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
-                var startPrice1 = parseInt(data.starting_price);
+                var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
-                var totalMaintenance1 = parseInt(data.total_cost);
-                var totalCostOfVehicle = (startPrice + totalMaintenance);
+                var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
+                var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
                 $("#price").text(`$ ${startPrice1}`);
@@ -94,7 +94,8 @@ $(document).ready(() => {
                 $("#service1").text(`$ ${startPrice1}`);
                 $("#service1").text(`$ ${totalMaintenance1}`);
                 $("#comparephoto1").attr("src", data.stockphoto);
-
+                var serviceIntervalsHead = "Service Intervals"
+                $(".serviceIntervalsHead").text(serviceIntervalsHead);
                 ////////////////////////////// jake input begin
                 var tenk1 = parseInt(data.cost_10k);
                 var twenk1 = parseInt(data.cost_20k);
@@ -146,6 +147,8 @@ $(document).ready(() => {
                 $("#service2").text(`$ ${startPrice1}`);
                 $("#service2").text(`$ ${totalMaintenance1}`);
                 $("#comparephoto2").attr("src", data.stockphoto);
+                var serviceIntervalsHead2 = "Service Intervals"
+                $(".serviceIntervalsHead2").text(serviceIntervalsHead2);
                 //jake////////////////////////////
                 var tenk2 = parseInt(data.cost_10k);
                 var twenk2 = parseInt(data.cost_20k);
@@ -189,7 +192,7 @@ $(document).ready(() => {
         console.log(dailyGas)
         dailyGas = parseFloat(dailyGasEl.val());
         displayGas = ((dailyGas / mpg) * premoGas);
-        gasPriceEl.text("Daily gas cost: $" + displayGas.toFixed(2));
+        gasPriceEl.text("$" + displayGas.toFixed(2) + " - Daily Gas Costs");
 
 
     });
