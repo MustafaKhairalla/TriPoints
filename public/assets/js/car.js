@@ -1,13 +1,18 @@
-stateSelectEl = $("#stateSelect");
-citySelectEl = $("#citySelect");
-mainDivEl = $("#mainDiv")
-FindOutButtonEl = $("#findOutButton")
-
-
+var stateSelectEl = $("#stateSelect");
+var citySelectEl = $("#citySelect");
+var gasPriceEl = $("#gasPrice");
+var dailyGasEl = $("#dailyMiles");
+var mainDivEl = $("#mainDiv")
+var FindOutButtonEl = $("#findOutButton")
+var submitEl = $("#submitButton");
+var modelAreaEl = $("#model-area");
 
 $(document).ready(() => {
 
-
+    var premoGas = 0;
+    var dailyGas = 0; 
+    var displayGas = 0;
+    var mpg = 0;  
     FindOutButtonEl.on("click", function () {
         window.scrollTo(0, 500);
         console.log("find button listener")
@@ -40,7 +45,7 @@ $(document).ready(() => {
         console.log(id);
         $.get("/api/posts/" + id, function (data) {
             if (data) {
-                alert("boooooooo")
+                // alert("boooooooo")
                 $("#vehicleName").text(`The Total Cost of your ${data.model}`);
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
@@ -53,6 +58,7 @@ $(document).ready(() => {
                 $("#MaintenancePrice").text(`$ ${totalMaintenance1}`);
 
                 $("#stockphoto").attr("src", data.stockphoto);
+                mpg = data.MPG;
 // //var number = 1557564534;
 // document.body.innerHTML = number.toLocaleString();
 
@@ -103,46 +109,37 @@ $(document).ready(() => {
 
 
 
-    var cityList = [];
-    var regGas = 0;
-    var midGas = 0;
-    var premoGas = 0;
-    stateSelectEl.on("change", () => {
+  
+    $("#stateSelect").on("change", function () {
+        // console.log("stuff");
         var q = $(this).val();
-
-        stateSelectEl.on("change", () => {
-            var settings = {
-                "method": "GET",
-                "hostname": "api.collectapi.com",
-                "port": null,
-                "path": `/gasPrice/stateUsaPrice?state=${q}`,
-                "headers": {
-                    "content-type": "appliaction/json",
-                    "authorization": "apikey 49PSi9LIungoODV0eCgFY1:6kRdisGS8DTmy0S8uTesMe"
-                }
+        console.log(q);
+        $.get(`/api/get_price/${q}`, function (result) {
+            if (result) {
+                premoGas = parseFloat(result);
+                console.log(premoGas);
             }
-            $.ajax(settings).done((response) => {
-                console.log(response);
-                regGas = response[0].gasoline;
-                midGas = response[0].midGrade;
-                premoGas = response[0].premium;
+            else if (!result) {
+                console.log("didn't get anything")
+            }
 
-                for (i = 0; response.result.cities.length; i++) {
-                    cityList.push(response.result.cities[i]);
-                };
-            }).then((cityList) => {
-                var options = '';
-                for (i = 0; i < cityList.length; i++) {
-                    options += '<option value="' + cityList[i].name + '">' + cityList[i].name + '</option>';
-                };
-                citySelectEl.append(options);
-            });
 
         });
-    });
-    $(citySelectEl).on("change", () => {
+       
 
-    })
+
+    });
+   
+    submitEl.on("click", function(event){
+        
+        event.preventDefault();
+        console.log("submitted");
+        console.log (mpg)
+        console.log(dailyGas)
+        dailyGas =  parseFloat(dailyGasEl.val());
+        displayGas = ((dailyGas/mpg) * premoGas);
+        gasPriceEl.text("Daily gas cost: " + displayGas.toFixed(2));
+    }); 
 
 });
 
