@@ -4,8 +4,12 @@
         <a href='/Login' class=“login”>Log-in</a>
 =======
         {{!-- <button type="button" class="uk-button uk-button-default uk-button-small login" href="">Log-in</button> --}}
+<<<<<<< HEAD
         <a href= '/Login' class="login" >Log-in</a>
 >>>>>>> 3b3f751e7d31e9b121e2b295d220c8ee3d755d91
+=======
+        <a href='/Login' class="login">Log-in</a>
+>>>>>>> 22ada0deefd89f3034235196af1b0dd3dbd3bad8
     </div>
 </div>
 
@@ -48,11 +52,7 @@
                 <form id="submitform">
                     <select id="model-area" class="uk-select">Vehicle Model
                         <option value="" disabled selected>Please select Model</option>
-                        {{#each cars}}
-                        {{!-- this will loop through the table in db and populate an option for each --}}
-                        <option value="{{id}}">{{model}}</option>
 
-                        {{/each}}
 
                     </select>
 
@@ -117,6 +117,114 @@
 
         <!-- this is where the modal of the car will go -->
     </div>
+</div>
+<div class="uk-section" id="UserHeader">
+    <div class="uk-container">
+        <div class="uk-card">
+            <div class="uk-card-header">
+                <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+                    <div>
+                        <h1>Choose a Model</h1>
+                    </div>
+                    <div>
+                        <form>
+                            <select class="uk-select" id="compareModelsSelect" width="60%">Vehicle Model
+                                {{!-- {{#each cars}}
+                                <option value="{{ id}}">{{ model}}</option>
+                                {{/each}} --}}
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+                    <div class="uk-card-media-left uk-cover-container">
+                        <img src="assets/images/eclass1.jpg" alt="Test image" uk-cover>
+                        <canvas width="" height=""></canvas>
+                    </div>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div><i class="fas fa-car"></i> </div>
+                            <div>
+                                <p>MSRP</p>
+                            </div>
+                            <div>
+                                <p class=msrp>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i class="fas fa-wrench"></i> </div>
+                            <div>
+                                <p>Total Cost of Service </p>
+                            </div>
+                            <div>
+                                <p class=costService>40,000</p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>10K</p>
+                            </div>
+                            <div>
+                                <p class=10kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>20K</p>
+                            </div>
+                            <div>
+                                <p class=20kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>30K</p>
+                            </div>
+                            <div>
+                                <p class=30kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>40K</p>
+                            </div>
+                            <div>
+                                <p class=40kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>50K</p>
+                            </div>
+                            <div>
+                                <p class=50kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                        <div uk-grid>
+                            <div><i></i> </div>
+                            <div>
+                                <p>60K</p>
+                            </div>
+                            <div>
+                                <p class=60kservices>Lorem Ipsum </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </div>
 <!--<footer class="footer" id="footer">
     <div class="uk-section">

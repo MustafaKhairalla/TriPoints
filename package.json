@@ -18,10 +18,7 @@
   },
   "homepage": "https://github.com/MustafaKhairalla/project-duck-2.0#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "bcrypt": "^4.0.1",
-=======
->>>>>>> 3b3f751e7d31e9b121e2b295d220c8ee3d755d91
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
