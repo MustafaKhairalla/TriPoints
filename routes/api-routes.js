@@ -33,6 +33,7 @@ module.exports = function (app) {
 
     app.get("/api/get_price/:q", async function (req, res) {
         var q = req.params.q
+        var gasPrice = 0; 
         console.log("got " +q );
        
 
@@ -45,5 +46,9 @@ module.exports = function (app) {
         }
         var result = await axios.get(`http://api.collectapi.com/gasPrice/stateUsaPrice?state=${q}`, config); 
         console.log(JSON.stringify(result.data, null, 2)); 
+
+        gasPrice = result[0].state.premium; 
+        console.log("Gas price: "+gasPrice);
+        return result;
     })
 }

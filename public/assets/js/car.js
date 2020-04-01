@@ -4,7 +4,7 @@ gasPriceEl = $("#gasPrice");
 dailyGasEl = $("#dailyMiles");
 mainDivEl = $("#mainDiv")
 FindOutButtonEl = $("#findOutButton")
-
+submitEl = $("#submitButton");
 
 
 $(document).ready(() => {
@@ -72,16 +72,28 @@ $(document).ready(() => {
     var midGas = 0;
     var premoGas = 0;
     $("#stateSelect").on("change", function () {
-  
+        console.log("stuff");
         var q = $(this).val();
-        $.get("/api/get_price/"+q, function (data) {
-            if(data){
-                console.log("inside api call");
-                console.log(data);
+
+        var cityList = [];
+        $.get("/api/get_price/" + q, function (result) {
+            if (result) {
+                console.log(result)
             }
-            
-            console.log(data); 
-            console.log(`${q} selected`);
+            else if(!result){
+                console.log("didn't get anything")
+            }
+
+
+
+            // console.log(`data: ${data}`);
+            // if (data) {
+            //     console.log("inside api call");
+            //     console.log(data);
+            // };
+
+            // console.log(data);
+            // console.log(`${q} selected`);
             // $.ajax(data).done(function (response) {
             //     console.log(response);
 
@@ -99,6 +111,13 @@ $(document).ready(() => {
             //     citySelectEl.append(options);
             // });
         });
+        // }).then(function (data) {
+        //     console.log(`Data: ${data}`);
+        //     for (i = 0; i < data.length + 1; i++) {
+        //         cityList.push(data[i]);
+        //     }
+        //     console.log(cityList);
+        // });
 
 
     });
