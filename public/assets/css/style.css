@@ -13,7 +13,7 @@
   }
   } */
 
-body{
+body, html{
     background-image: url("/assets/images/BackgroundPattern.jpg");
     background-size: cover;
     background-repeat: repeat-x;
@@ -128,3 +128,6 @@ li {
 html {
     scroll-behavior: smooth;
   }
+.tabledpadd{
+    padding-bottom: 20px;
+}  
