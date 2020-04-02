@@ -4,7 +4,7 @@ var gasPriceEl = $("#gasPrice");
 var dailyGasEl = $("#dailyMiles");
 var mainDivEl = $("#mainDiv")
 var FindOutButtonEl = $("#findOutButton")
-var submitEl = $("#submitButton");
+var submitEl1 = $("#submitButton1");
 var modelAreaEl = $("#model-area");
 
 $(document).ready(() => {
@@ -14,7 +14,8 @@ $(document).ready(() => {
     var displayGas = 0;
     var mpg = 0;
 
-    submitEl.on("click", function () {
+    submitEl1.on("click", function () {
+        event.preventDefault();
         window.scrollTo(0, 1250);
         console.log("submit button listener")
         // alert("You clicked to find more")
@@ -211,7 +212,7 @@ $(document).ready(() => {
         });
     });
 
-    submitEl.on("click", function (event) {
+    submitEl1.on("click", function (event) {
         event.preventDefault();
         console.log("submitted");
         console.log(mpg)
