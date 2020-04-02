@@ -3,6 +3,7 @@
 <hr>
 <br>
 <h3> Welcome to TriPoints! We are committed to providing users with the true costs of owning a brand-new Mercedes-Benz vehicle. </h3>
+<img src="https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/logoscreen.png" alt="logo screen">
 
 ## User Story
 <p>As a User,</p>
@@ -16,15 +17,20 @@
 <p>Login, if you desire.</p>
 <p>Select a model.</p>
 <p>View pricing and images.</p>
+<p>Compare two vehicles side-by-side</p>
 <p>Make an informed decision on which vehicle you'd like to purchase.</p>
 <p>It's just that simple!</p>
+ <img src="https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/comparescreen.png" alt="c300">
 
 ## Key Features
 <ul>
   <li>Beautifully-designed interface</li>
   <li>Accurate pricing</li>
+  <li>See side-by-side comparisons.</li>
   <li>Clear Images</li>
   <li>Resources to contact or visit Mercedes-Benz dealerships.</li>
+  </ul>
+  
 
 ## Contributors
 <ul>
