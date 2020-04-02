@@ -60,7 +60,9 @@ $(document).ready(() => {
             }
         });
 
-    }); ///// compare page////////////new jake
+    });
+
+    ///// compare page////////////new jake
     $.get("/api/all", function (data) {
 
         if (data.length !== 0) {
@@ -76,6 +78,8 @@ $(document).ready(() => {
             }
         }
     });
+
+
     $("#model-area").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
@@ -84,6 +88,9 @@ $(document).ready(() => {
             if (data) {
                 // alert("boooooooo")
                 $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+
+
+
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
@@ -109,6 +116,11 @@ $(document).ready(() => {
                 $("#fifk1").text(`Service @ 50k Miles: $ ${fifk1}`);
                 $("#sixk1").text(`Service @ 60k Miles: $ ${sixk1}`);
                 mpg = data.MPG;
+
+                //COMPARE TABLE 1  DISPLAY
+                $("#firstModel").text(data.model);
+                $("#firstMSRP").text(`$ ${data.starting_price}`);
+                $("#firstTotal").text(`$ ${data.total_cost}`);
             }
         });
     });
@@ -128,6 +140,8 @@ $(document).ready(() => {
             }
         }
     });
+
+
     $("#model-area2").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
@@ -160,6 +174,11 @@ $(document).ready(() => {
                 $("#fifk2").text(`Service @ 50k Miles: $ ${fifk2}`);
                 $("#sixk2").text(`Service @ 60k Miles: $ ${sixk2}`);
                 mpg = data.MPG;
+
+                //COMPARE TABLE 2 DISPLAY
+                $("#secondModel").text(data.model);
+                $("#secondMSRP").text(`$ ${data.starting_price}`);
+                $("#secondTotal").text(`$ ${data.total_cost}`);
             };
         });
     });

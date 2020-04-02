@@ -108,3 +108,11 @@ li {
 .uk-card-header{
     background-color: #E6E7E8;
 }
+.btnOut{
+    margin-right: 20px;
+}
+
+.color{
+    color:red;
+    font-weight: bold;
+}
