@@ -2,7 +2,7 @@
   "development": {
     "username": "b0cbb9f060fdef",
     "password": "6ab70606",
-    "database": "mb_db",
+    "database": "heroku_9b81c2ea5ab9029",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
