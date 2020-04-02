@@ -13,11 +13,17 @@ $(document).ready(() => {
     var dailyGas = 0;
     var displayGas = 0;
     var mpg = 0;
+
+    submitEl.on("click", function () {
+        window.scrollTo(0, 1250);
+        console.log("submit button listener")
+        // alert("You clicked to find more")
+    });
     FindOutButtonEl.on("click", function () {
         window.scrollTo(0, 500);
         console.log("find button listener")
         // alert("You clicked to find more")
-    })
+    });
 
     // GETTING ALL CAR MODELS DISPLAYED FOR USER :
 
@@ -38,23 +44,23 @@ $(document).ready(() => {
     });
 
     // GETTING ID TO PULL DATA FROM DB AND DISPLAYING PRICES TO USER
-    $("#model-area").on("change", function () {
+    $("#model-area1").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
         console.log(id);
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 // alert("boooooooo")
-                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+                $("#vehicleName").text(`The Total Cost of Your` + `${data.model}` + `:`);
                 var startPrice = parseInt(data.starting_price);
-                var startPrice1 = parseInt(data.starting_price);
+                var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
-                var totalMaintenance1 = parseInt(data.total_cost);
-                var totalCostOfVehicle = (startPrice + totalMaintenance);
+                var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
+                var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
-                $("#price").text(`$ ${startPrice1}`);
-                $("#MaintenancePrice").text(`$ ${totalMaintenance1}`);
+                $("#price").text(`Starting Price: `+`$ ${startPrice1}`);
+                $("#MaintenancePrice").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#stockphoto").attr("src", data.stockphoto);
                 mpg = data.MPG;
             }
@@ -83,18 +89,21 @@ $(document).ready(() => {
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 // alert("boooooooo")
-                $("#vehicleName").text(`The Total Cost of your ${data.model}`);
+                $("#vehicleName").text(`The Total Cost of Your ${data.model}` + `:`);
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
+                var mpg1 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp1").text(`$ ${totalCostOfVehicle}`);
-                $("#service1").text(`$ ${startPrice1}`);
-                $("#service1").text(`$ ${totalMaintenance1}`);
+                $("#service1").text(`Starting Price: `+`$ ${startPrice1}`);
+                $("#service1").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#comparephoto1").attr("src", data.stockphoto);
-
+                var serviceIntervalsHead = "Service Intervals"
+                $(".serviceIntervalsHead").text(serviceIntervalsHead);
+                $("#fuel1").text(mpg1 + " MPG (Combined)");
                 ////////////////////////////// jake input begin
                 var tenk1 = parseInt(data.cost_10k);
                 var twenk1 = parseInt(data.cost_20k);
@@ -141,11 +150,15 @@ $(document).ready(() => {
                 var totalMaintenance = parseInt(data.total_cost);
                 var totalMaintenance1 = parseInt(data.total_cost).toLocaleString();
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
+                var mpg2 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp2").text(`$ ${totalCostOfVehicle}`);
                 $("#service2").text(`$ ${startPrice1}`);
-                $("#service2").text(`$ ${totalMaintenance1}`);
+                $("#service2").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
                 $("#comparephoto2").attr("src", data.stockphoto);
+                var serviceIntervalsHead2 = "Service Intervals"
+                $(".serviceIntervalsHead2").text(serviceIntervalsHead2);
+                $("#fuel2").text(mpg2 + " MPG (Combined)");
                 //jake////////////////////////////
                 var tenk2 = parseInt(data.cost_10k);
                 var twenk2 = parseInt(data.cost_20k);
@@ -189,7 +202,7 @@ $(document).ready(() => {
         console.log(dailyGas)
         dailyGas = parseFloat(dailyGasEl.val());
         displayGas = ((dailyGas / mpg) * premoGas);
-        gasPriceEl.text("Daily gas cost: $" + displayGas.toFixed(2));
+        gasPriceEl.text("$" + displayGas.toFixed(2) + " - Daily Gas Costs");
 
 
     });

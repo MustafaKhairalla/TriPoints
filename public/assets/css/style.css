@@ -26,9 +26,10 @@ body{
     /* padding: 2% 15% 2% 15% ; */
     margin: 0 auto;
     color: #ffffff;
+    padding: 2%;
 }
 h1,h2,h3,h4,h5,h6,p{
-   font-family: 'Josefin Sans', sans-serif;;
+   font-family: 'Josefin Sans', sans-serif;
 }
 #Logo1
 {
@@ -40,6 +41,9 @@ h1,h2,h3,h4,h5,h6,p{
     background-color: black;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .newUser{
     float: left;
@@ -64,11 +68,6 @@ a:hover{
 #submitButton{
     float: right;
     margin: 6%, 0%, 4%, 0%;
-}
-footer {
-    background-color: black;
-    padding: 10px;
-    margin-top: 5px;
 }
 #vehicleInfo{
     background-image: url("/assets/images/BackgroundPattern.jpg");
@@ -108,3 +107,16 @@ li {
 .uk-card-header{
     background-color: #E6E7E8;
 }
+.photofix {
+    width:428px;
+   height:160px;
+   object-fit: cover;
+}
+.photofix2 {
+    width:229px;
+   height:229px;
+   object-fit: cover;
+}
+html {
+    scroll-behavior: smooth;
+  }
