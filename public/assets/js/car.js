@@ -59,14 +59,16 @@ $(document).ready(() => {
                 var totalCostOfVehicle = (startPrice + totalMaintenance).toLocaleString();
                 console.log(`start price ${totalCostOfVehicle}`);
                 $(".totalDollarValue").text(`$ ${totalCostOfVehicle}`);
-                $("#price").text(`Starting Price: `+`$ ${startPrice1}`);
-                $("#MaintenancePrice").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
+                $("#price").text(`Starting Price: ` + `$ ${startPrice1}`);
+                $("#MaintenancePrice").text(`Maintenance Costs: ` + `$ ${totalMaintenance1}`);
                 $("#stockphoto").attr("src", data.stockphoto);
                 mpg = data.MPG;
             }
         });
 
-    }); ///// compare page////////////new jake
+    });
+
+    ///// compare page////////////new jake
     $.get("/api/all", function (data) {
 
         if (data.length !== 0) {
@@ -82,6 +84,8 @@ $(document).ready(() => {
             }
         }
     });
+
+
     $("#model-area").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
@@ -98,8 +102,8 @@ $(document).ready(() => {
                 var mpg1 = parseInt(data.MPG);
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp1").text(`$ ${totalCostOfVehicle}`);
-                $("#service1").text(`Starting Price: `+`$ ${startPrice1}`);
-                $("#service1").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
+                $("#service1").text(`Starting Price: ` + `$ ${startPrice1}`);
+                $("#service1").text(`Maintenance Costs: ` + `$ ${totalMaintenance1}`);
                 $("#comparephoto1").attr("src", data.stockphoto);
                 var serviceIntervalsHead = "Service Intervals"
                 $(".serviceIntervalsHead").text(serviceIntervalsHead);
@@ -118,6 +122,11 @@ $(document).ready(() => {
                 $("#fifk1").text(`Service @ 50k Miles: $ ${fifk1}`);
                 $("#sixk1").text(`Service @ 60k Miles: $ ${sixk1}`);
                 mpg = data.MPG;
+
+                //COMPARE TABLE 1  DISPLAY
+                $("#firstModel").text(data.model);
+                $("#firstMSRP").text(`$ ${data.starting_price}`);
+                $("#firstTotal").text(`$ ${data.total_cost}`);
             }
         });
     });
@@ -137,6 +146,8 @@ $(document).ready(() => {
             }
         }
     });
+
+
     $("#model-area2").on("change", function () {
         var id = $(this).val();
         console.log("id chosen:");
@@ -154,7 +165,7 @@ $(document).ready(() => {
                 console.log(`start price ${totalCostOfVehicle}`);
                 $("#msrp2").text(`$ ${totalCostOfVehicle}`);
                 $("#service2").text(`$ ${startPrice1}`);
-                $("#service2").text(`Maintenance Costs: `+`$ ${totalMaintenance1}`);
+                $("#service2").text(`Maintenance Costs: ` + `$ ${totalMaintenance1}`);
                 $("#comparephoto2").attr("src", data.stockphoto);
                 var serviceIntervalsHead2 = "Service Intervals"
                 $(".serviceIntervalsHead2").text(serviceIntervalsHead2);
@@ -173,6 +184,11 @@ $(document).ready(() => {
                 $("#fifk2").text(`Service @ 50k Miles: $ ${fifk2}`);
                 $("#sixk2").text(`Service @ 60k Miles: $ ${sixk2}`);
                 mpg = data.MPG;
+
+                //COMPARE TABLE 2 DISPLAY
+                $("#secondModel").text(data.model);
+                $("#secondMSRP").text(`$ ${data.starting_price}`);
+                $("#secondTotal").text(`$ ${data.total_cost}`);
             };
         });
     });

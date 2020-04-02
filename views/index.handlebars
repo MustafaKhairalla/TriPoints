@@ -1,8 +1,12 @@
 <div class="uk-section" id="header">
     <div class="uk-container">
         {{!-- <button type="button" class="uk-button uk-button-default uk-button-small login" href="">Log-in</button> --}}
+        <a href='/signup' class="uk-button uk-button-secondary">Sign Up</a>
+        <a href='/login' class=" btnOut uk-button uk-button-secondary">Login</a>
+        {{!-- <a href='/compare' class="login">Compare</a> --}}
+
         {{!-- <a href='/Login' class="login">Log-in</a> --}}
-        <a href='/compare' class="uk-button uk-button-secondary">Compare</a>
+
     </div>
 </div>
 
@@ -103,11 +107,6 @@
                         <option value="WY">WY</option>
                     </select>
 
-                    <!-- <select class="uk-select" name="City" id="citySelect" > City
-                        <option value=“” disabled selected>Select City</option>
-                         <option value="defualt">Select City</option>
-                    <option value="colorado Springs">Colorado springs</option> 
-                    </select> -->
 
                     <input class="uk-textarea" placeholder="Average Daily Miles" id="dailyMiles"></input>
 
@@ -125,31 +124,34 @@
         <div class="uk-card uk-card-default uk-card-body">
             <div uk-grid>
                 <h1 id="vehicleName">The Total Cost of Your Vehicle</h1>
-                <h1 class="totalDollarValue">$  -----</h1>
+                <h1 class="totalDollarValue">$ 000</h1>
             </div>
             <hr>
             <div class="uk-child-width-expand@s" uk-grid>
                 <div class="uk-grid-item-match">
                     <div class="uk-card uk-card-default uk-card-body">
-                        <img class="photofix" src="assets/images/WhiteMercedesExample.jpg" alt="ExampleVehicle" id="stockphoto">
+                        <img class="photofix" src="assets/images/WhiteMercedesExample.jpg" alt="ExampleVehicle"
+                            id="stockphoto">
                     </div>
                 </div>
 
                 <div>
                     <div uk-grid>
                         <!--<img src="assets/images/Car Icon.png" id="icon" alt="car Icon">-->
-                        <h4 id="price">
-                            <i class="fas fa-car-side fa-lg"></i> Select a vehicle above to view starting price.</h4>
+                        <h5 id="price">
+                            <i class="fas fa-car-side fa-lg"></i> Select a vehicle above to view starting price.</h5>
                     </div>
                     <div uk-grid>
                         <!--<img src="assets/images/Gas Icon.png" alt="Gas" id="icon">-->
-                        <h4 id="gasPrice">
-                            <i class="fas fa-gas-pump fa-lg"></i> Select a vehicle and average miles driven daily to view average fuel costs.</h4>
+                        <h5 id="gasPrice">
+                            <i class="fas fa-gas-pump fa-lg"></i> Select a vehicle and average miles driven daily to
+                            view average fuel costs.</h5>
                     </div>
                     <div uk-grid>
                         <!--<img src="assets/images/Wrench Icon.png" alt="Wrench" id="icon">-->
-                        <h4 id="MaintenancePrice">
-                            <i class="fas fa-wrench fa-lg"></i> Select a vehicle above to view average service costs.</h4>
+                        <h5 id="MaintenancePrice">
+                            <i class="fas fa-wrench fa-lg"></i> Select a vehicle above to view average service costs.
+                        </h5>
                     </div>
 
                 </div>

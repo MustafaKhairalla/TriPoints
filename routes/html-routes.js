@@ -1,17 +1,27 @@
 var path = require("path");
 var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 //ROUTES:
 
 module.exports = function (app) {
 
     //  LOAD MAIN PAGE
-
     app.get("/", function (req, res) {
         // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
         res.render("index", { cars: res });
     });
 
-    //GET CAR INFO
+
+    app.get("/signup", function (req, res) {
+        // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+        res.render("SignUp");
+    });
+    app.get("/login", function (req, res) {
+        // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+        res.render("Login");
+    });
+
+    //GET CAR INFO FOR A DROPDOWN
     app.get("/api/all", function (req, res) {
 
         db.Lineups.findAll({}).then(function (data) {
@@ -43,18 +53,10 @@ module.exports = function (app) {
     });
 
     //  LOAD compare page
+    app.get("/compare", isAuthenticated, function (req, res) {
 
-    app.get("/compare", function (req, res) {
-        // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
-        res.render("compare", { cars: res });
+        res.render("compare");
     });
 
-    // app.get("/api/posts", async function (req, res) {
 
-    //     const modelChosen = await db.Lineups.findOne({ where: { id: req.params.id } }).then(function (dbLineups) {
-
-    //         res.json(dbLineups);
-    //     });
-    //     console.log(modelChosen);
-    // })
 }
