@@ -16,12 +16,8 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   },
   "cristian": {
     "username": "node",
@@ -46,7 +42,7 @@
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
-  }, 
+  },
   "jacob": {
     "username": "root",
     "password": "Bobo_1995",
@@ -54,7 +50,6 @@
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
-  
   },
   "mustafa": {
     "username": "nodetest",
@@ -63,7 +58,5 @@
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
-  
   }
-  
 }
