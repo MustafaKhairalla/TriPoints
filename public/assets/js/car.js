@@ -52,7 +52,7 @@ $(document).ready(() => {
         $.get("/api/posts/" + id, function (data) {
             if (data) {
                 // alert("boooooooo")
-                $("#vehicleName").text(`The Total Cost of Your` + `${data.model}` + `:`);
+                $("#vehicleName").text(`The Total Cost of Your ` + `${data.model}` + `:`);
                 var startPrice = parseInt(data.starting_price);
                 var startPrice1 = parseInt(data.starting_price).toLocaleString();
                 var totalMaintenance = parseInt(data.total_cost);
