@@ -3,6 +3,7 @@ const Handlebars = require('handlebars')
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
+var compression = require("compression");
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 
 
@@ -13,6 +14,7 @@ var db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 var app = express();
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
