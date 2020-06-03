@@ -4,6 +4,8 @@
 <br>
 <h3> Welcome to TriPoints! We are committed to providing users with the true costs of owning a brand-new Mercedes-Benz vehicle. </h3>
 <img src="https://raw.githubusercontent.com/MustafaKhairalla/project-duck-2.0/master/public/assets/images/logoscreen.png" alt="logo screen">
+<br>
+<a href="https://tripoint.herokuapp.com/">Link to TriPoints</a>
 
 ## User Story
 <p>As a User,</p>
