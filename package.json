@@ -20,7 +20,7 @@
   "homepage": "https://github.com/MustafaKhairalla/project-duck-2.0#readme",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "eslint": "^6.8.0",
